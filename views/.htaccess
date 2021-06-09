@@ -1,0 +1,6 @@
+
+RewriteOptions inherit
+
+# Clean Links
+RewriteRule ^/?action=home$ /
+
