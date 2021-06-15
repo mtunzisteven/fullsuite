@@ -2,8 +2,8 @@
 <?php 
 
 $pageName="Home";
-$pageDescription="MEDIAFRIKA uses digital marketing to enhance your reach and engage customers. info@mediafrika.co.za | 087 195 0976";
-$pageShortSummary="We Are Your Online Marketing Solution";
+$pageDescription="";
+$pageShortSummary="";
 
 ?><!DOCTYPE html>
 <html lang="en-us">
@@ -13,68 +13,93 @@ $pageShortSummary="We Are Your Online Marketing Solution";
         
     ?>
 
- <body>
-    <div class="wrapper">
-        <div class="overlay">
-            <div class="column-two header-nav">
-                <?php
-        
-                        include "snippets/navigation.php";
-                ?>
-            </div>
-            <div class="columns-one">
+    <body>
+        <div class="wrapper">
+            <?php
+
+                    include "snippets/navigation.php";
+
+            ?>
+            
+            <div class="hero">
                 <div class="hero-text">
-                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <span class="h11">Growth </span>
+                    <span class="h12">& </span>
+                    <span class="h13">Expansion</span>
                 </div>
             </div>
-        </div>
 
+            <div class="content">
+                <div class="hero-bottom">
+                    <span class="h14">Our company is a collection of amazning people striving to provide effective business communications solutions.</span>
+                </div>
+                <div class="inner-content">
+                    &nbsp;
+                    <h3 class="inner-title">FULL SUITE TELECOMS</h3>
+                    <p class="inner-p">is a business communication solutions company that was established as a direct response to the dynamic needs of our customers. The company is founded on the principles of honour and integrity. Our growth strategy hinges on the provision of quality service to our customers, respect for our employees and transparency with our partners.</p>
 
-        <main>
+                    <h3 class="inner-title">OUR VISION</h3>
+                    <p class="inner-p">To become a seamless, full intergraed technology partner that offers our customers more choice and superior experience.</p>
 
+                    <h3 class="inner-title">MISSION</h3>
+                    <p class="inner-p">To become a leading alternative and independant telecoms service provider, providing voice, data and collaboration services in Africa.</p>
 
-            <div id="about" class="column columns-two">
-                <img class="column-image column-image-left" src="images/image.png" alt="">
-                <div>
-                    <h3 class="  font-center column-text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</h3>
-                    <p class="  font-center column-text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>                 
-                    <div class="div-button">
-                        <div class="div-div-button services-button"><a href="/?action=contact" class="button">button</a></div>
-                    </div>   
-                </div> 
+                    <h3 class="inner-title">VISION</h3>
+                    <p class="inner-p">Quality service and excellence, Honesty and High levels of integrity in all aspects of our organization.</p>
+
+                    <h3 class="inner-title">STRATEGY</h3>
+                    <p class="inner-p">To leverage technology to enhance customer experience, drive value and most importantly offer unparalleled customer service.</p>
+                </div>
+                <div class="partners-header">
+                    <span class="partners">OUR PARTNERS</span>
+                </div>
+                <div class="partners-block">
+
+                    <img src="/fullsuite/images/hugetelecom.jpg" alt="Huge Telecom logo" />
+                    <img src="/fullsuite/images/telkom.png" alt="telkom logo" />
+                    <img src="/fullsuite/images/ecn.png" alt="telkom logo" />
+                    <img src="/fullsuite/images/nec.png" alt="telkom logo" />
+                    <img src="/fullsuite/images/yealink.png" alt="telkom logo" />
+
+                
+                </div>
+                <div class="contact-header">
+                    <span class="contact">CONTACT US</span>
+                </div>
+                <div class="contact-block">
+                    <div class="contact-info">
+                        <p class="contact-details">
+                            info@fullsuitetelecoms.com<br/>
+                            Mosley Park<br />
+                            Pinetown<br />
+                            3610<br />
+                            Kwa-Zulu Natal<br />
+                            South Africa
+                        </p>
+                        <img src="/fullsuite/images/map.png" />
+                    </div>
+
+                    <form>
+
+                        <label>Your Name(required)</label><input type="text" name="name" required />
+                        <label>Your Email(required)</label><input type="email" name="email" required />
+                        <label>Subject</label><input type="text" name="subject" required />
+                        <label>Your Message</label><textarea name="message" rows="12" required ></textarea>
+
+                        <input type="submit" class="send-button" value="SEND" />
+
+                        <div id="response-div"></div>
+
+                    </form>
+
+                </div>
             </div>
 
-
-            <div id="about" class="column color-gradient columns-two">
-                <img class="column-image column-image-left" src="images/image.png" alt="">
-                <div>
-                    <h3 class="color-gradient-font  font-center column-text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</h3>
-                    <p class="color-gradient-font font-center column-text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>                 
-                    <div class="div-button">
-                        <div class="div-div-button services-button"><a href="/?action=contact" class="button">button</a></div>
-                    </div>   
-                </div> 
-            </div>
-
-            
-            <div id="about" class="column columns-two">
-                <img class="column-image column-image-left" src="images/image.png" alt="">
-                <div>
-                    <h3 class="  font-center column-text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</h3>
-                    <p class="  font-center column-text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>                 
-                    <div class="div-button">
-                        <div class="div-div-button services-button"><a href="/?action=contact" class="button">buttons</a></div>
-                    </div>   
-                </div> 
-            </div>
-        </main>
-        <?php include "snippets/footer.php"; ?> 
+            <?php 
+                
+                include "snippets/footer.php"; 
+                
+            ?> 
         </div>
     </body>
 </html>

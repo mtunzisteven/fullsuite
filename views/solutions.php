@@ -1,7 +1,7 @@
 
 <?php 
 
-$pageName="About";
+$pageName="Solutions";
 $pageDescription="";
 $pageShortSummary="";
 
@@ -23,8 +23,7 @@ $pageShortSummary="";
             
             <div class="hero">
                 <div class="hero-text about">
-                    <span class="h11">About </span>
-                    <span class="h13">Us</span>
+                    <span class="h11">Solutions </span>
                 </div>
             </div>
 

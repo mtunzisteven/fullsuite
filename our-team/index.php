@@ -5,9 +5,9 @@ session_start();
 if(!isset($_SESSION['action']) && ($_SESSION['turn']!=1 || !isset($_SESSION['turn']))){
 
     $_SESSION['turn'] = 1;
-    $_SESSION['action'] = "pricing";
+    $_SESSION['action'] = "our-team";
 
     header("Location: ./");
 }
 
-include '../views/pricing.php';
+include '../views/our-team.php';
