@@ -21,40 +21,109 @@ $pageShortSummary="";
 
             ?>
             
-            <div class="hero">
-                <div class="hero-text">
-                    <span class="h11">Growth </span>
-                    <span class="h12">& </span>
-                    <span class="h13">Expansion</span>
+            <div class="hero block">
+                <div class="block-text-container hero-block-text-container">
+                    <div class="block-text">
+                        <div class="h11">Title Text </div>
+                        <div class="h13">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    </div>
+                    <div class="block-buttons">
+                        <a href='#' class="buttons solid-button buttons-2">About Us </a>
+                        <a href='#' class="buttons border-button buttons-2">Contact Us</a>
+                    </div>
                 </div>
+                <img class='block-top-image' src='/fullsuite/images/cordphone.png' alt='hero image' />
             </div>
 
             <div class="content">
-                <div class="hero-bottom">
-                    <span class="h14">Our company is a collection of amazning people striving to provide effective business communications solutions.</span>
+                <div class="block">
+                    <div class="block-text-container">
+                        <div class="block-text">
+                            <div class="h11 dark">Title Text </div>
+                            <div class="h13 dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                        <div class="block-buttons">
+                            <a href='#' class="buttons solid-button">Our Services</a>
+                        </div>
+                    </div>
+                    <div class='block-image-container'>
+                        <div class='block-imgback-shape shape1'>&nbsp;</div>
+                        <img class='block-top-image' src='/fullsuite/images/phone.jpg' alt='hero image' />
+                    </div>
                 </div>
-                <div class="inner-content">
-                    &nbsp;
-                    <h3 class="inner-title">FULL SUITE TELECOMS</h3>
-                    <p class="inner-p">is a business communication solutions company that was established as a direct response to the dynamic needs of our customers. The company is founded on the principles of honour and integrity. Our growth strategy hinges on the provision of quality service to our customers, respect for our employees and transparency with our partners.</p>
 
-                    <h3 class="inner-title">OUR VISION</h3>
-                    <p class="inner-p">To become a seamless, full intergraed technology partner that offers our customers more choice and superior experience.</p>
+                <div class="blue-block ">
+                    <div class='headings blues'>
+                        <span class="blue-span solutions-bluespan">OUR SOLUTIONS</span>
+                        <p class="blue-p solutions-blue-p"> We're a business communication solutions company that was established for your success!</p>
+                    </div>
+                    
+                    <div class="card-container">      
 
-                    <h3 class="inner-title">MISSION</h3>
-                    <p class="inner-p">To become a leading alternative and independant telecoms service provider, providing voice, data and collaboration services in Africa.</p>
+                        <div class="card-content">
+                            <i class="fa fa-image"></i>
+                            <h3 class="cart=d-title">Solution 1</h3>
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <a href='#' class="card-link">Learn More</a >
+                        </div >
 
-                    <h3 class="inner-title">VISION</h3>
-                    <p class="inner-p">Quality service and excellence, Honesty and High levels of integrity in all aspects of our organization.</p>
+                        <div class="card-content">
+                            <i class="fa fa-image"></i>
+                            <h3 class="cart=d-title">Solution 2</h3>
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <a href='#' class="card-link">Learn More</a >
+                        </div >
 
-                    <h3 class="inner-title">STRATEGY</h3>
-                    <p class="inner-p">To leverage technology to enhance customer experience, drive value and most importantly offer unparalleled customer service.</p>
+                        <div class="card-content">
+                            <i class="fa fa-image"></i>
+                            <h3 class="cart=d-title">Solution 3</h3>
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+                            <p class="card-content">contents</p >
+
+                            <a href='#' class="card-link">Learn More</a >
+                        </div >
+                    </div>
+                </div >
+
+                <div class="block">
+                    <div class='block-image-container'>
+                        <div class='block-imgback-shape shape2'>&nbsp;</div>
+                        <img class='block-top-image' src='/fullsuite/images/phonebook.jpg' alt='hero image' />
+                    </div>
+                    <div class="block-text-container">
+                        <div class="block-text">
+                            <div class="h11 dark">Title Text </div>
+                            <div class="h13 dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                        <div class="block-buttons">
+                            <a href='#' class="buttons solid-button">Our Services</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="partners-header">
+
+
+                <div class='headings blues blues2'>
+                    <span class="blue-span">Title Text</span>
+                    <p class="blue-p"> We're a business communication solutions company that was established for your success!</p>
+                </div>
+
+                <div class='headings'>
                     <span class="partners">OUR PARTNERS</span>
                 </div>
-                <div class="partners-block">
-
+                <div class="partners-block light-block">
+                    
+                
                     <img src="/fullsuite/images/hugetelecom.jpg" alt="Huge Telecom logo" />
                     <img src="/fullsuite/images/telkom.png" alt="telkom logo" />
                     <img src="/fullsuite/images/ecn.png" alt="telkom logo" />
@@ -63,10 +132,20 @@ $pageShortSummary="";
 
                 
                 </div>
-                <div class="contact-header">
-                    <span class="contact">CONTACT US</span>
-                </div>
-                <div class="contact-block">
+
+
+                <div class="blue-block">
+                    
+                    <div class="contact-info">
+                        <p class="contact-details">
+                            info@fullsuitetelecoms.com<br/>
+                            Mosley Park<br />
+                            Pinetown<br />
+                            3610<br />
+                            Kwa-Zulu Natal<br />About Us
+                            South Africa
+                        </p>
+                    </div>
                     <div class="contact-info">
                         <p class="contact-details">
                             info@fullsuitetelecoms.com<br/>
@@ -76,14 +155,22 @@ $pageShortSummary="";
                             Kwa-Zulu Natal<br />
                             South Africa
                         </p>
-                        <img src="/fullsuite/images/map.png" />
+                    </div>
+                    <div class="contact-info">
+                        <p class="contact-details">
+                            info@fullsuitetelecoms.com<br/>
+                            Mosley Park<br />
+                            Pinetown<br />
+                            3610<br />
+                            Kwa-Zulu Natal<br />
+                            South Africa
+                        </p>
                     </div>
 
                     <form>
 
                         <label>Your Name(required)</label><input type="text" name="name" required />
                         <label>Your Email(required)</label><input type="email" name="email" required />
-                        <label>Subject</label><input type="text" name="subject" required />
                         <label>Your Message</label><textarea name="message" rows="12" required ></textarea>
 
                         <input type="submit" class="send-button" value="SEND" />

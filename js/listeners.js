@@ -4,15 +4,15 @@ import{request} from "./requests.js";
 export const formListener = (formElements, responseDiv) => {
 
     // Iterate the forms elements
-    formElements.forEach(function(formElement){
+    for(let i = 0; i < formElements.length; i++){
 
-        const name = formElement.name; 
-        const email = formElement.email; 
-        const subject = formElement.subject; 
-        const message = formElement.message;
+        const name = formElements[i].name; 
+        const email = formElements[i].email; 
+        const subject = formElements[i].subject; 
+        const message = formElements[i].message;
 
         // Set up a submit event listener for each marker in the array
-        formElement.addListener('submit', function(){
+        formElements[i].addEventListener('submit', function(){
             preventDefault();
 
             const data = {
@@ -26,6 +26,26 @@ export const formListener = (formElements, responseDiv) => {
 
     });
 
-  });
+  }
+
+};
+
+export const mobileMenuListener = (openMenu, closeMenu, defaultmMenu, heddenmMenu) => {
+
+    openMenu.addEventListener('click', function(){
+
+        defaultmMenu.setAttribute("id", "hidden");
+
+        heddenmMenu.removeAttribute("id");
+
+    });
+
+    closeMenu.addEventListener('click', function(){
+
+        heddenmMenu.setAttribute("id", "hidden");
+
+        defaultmMenu.removeAttribute("id");
+
+    });
 
 };

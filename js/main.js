@@ -1,7 +1,19 @@
-import{formListener} from "./listeners.js";
+import{formListener, mobileMenuListener} from "./listeners.js";
+import{divSlider} from "./sliders.js";
 
 
 const forms = document.forms;
 const responseDiv = document.querySelector('#response-div');
 
-formListener(forms, responseDiv)
+formListener(forms, responseDiv);
+
+const openMenu = document.querySelector('#openMenu');
+const closeMenu = document.querySelector('#closeMenu');
+const defaultmMenu = document.querySelectorAll('.mobile-nav')[0];
+const heddenmMenu = document.querySelectorAll('.nav-hamburger-navigation')[0];
+
+mobileMenuListener(openMenu, closeMenu, defaultmMenu, heddenmMenu);
+
+const heroElements = document.querySelectorAll('.hero');
+
+//divSlider(heroElements);

@@ -29,34 +29,7 @@ $pageShortSummary="";
             </div>
 
             <div class="content">
-                <div class="hero-bottom">
-                    <span class="h14"> &nbsp;</span>
-                </div>
-
-                <div class="partners-header">
-                    <span class="partners">OUR PARTNERS</span>
-                </div>
-                <div class="partners-block">
-
-                    <img src="/fullsuite/images/hugetelecom.jpg" alt="Huge Telecom logo" />
-                    <img src="/fullsuite/images/telkom.png" alt="telkom logo" />
-                
-                </div>
-                <div class="contact-header">
-                    <span class="contact">CONTACT US</span>
-                </div>
-                <div class="contact-block">
-                    <div class="contact-info">
-                        <p class="contact-details">
-                            info@fullsuitetelecoms.com<br/>
-                            Mosley Park<br />
-                            Pinetown<br />
-                            3610<br />
-                            Kwa-Zulu Natal<br />
-                            South Africa
-                        </p>
-                        <img src="/fullsuite/images/map.png" />
-                    </div>
+                <div class="blue-block">
 
                     <form>
 
@@ -66,6 +39,8 @@ $pageShortSummary="";
                         <label>Your Message</label><textarea name="message" rows="12" required ></textarea>
 
                         <input type="submit" class="send-button" value="SEND" />
+
+                        <div id="response-div"></div>
 
                     </form>
                 </div>
