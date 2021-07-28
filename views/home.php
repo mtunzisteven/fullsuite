@@ -23,9 +23,9 @@ $pageShortSummary="";
             
             <div class="hero block">
                 <div class="block-text-container hero-block-text-container">
-                    <div class="block-text">
-                        <div class="h11">Title Text </div>
-                        <div class="h13">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div class="block-text hero-text">
+                        <div class="h11 heroh11">Title Text </div>
+                        <div class="h13 heroh11">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                     </div>
                     <div class="block-buttons">
                         <a href='#' class="buttons solid-button buttons-2">About Us </a>

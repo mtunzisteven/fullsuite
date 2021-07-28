@@ -435,6 +435,15 @@ div.content div.headings span {
   margin-top: 20px;
 }
 
+div.content div.headings span.solutions-bluespan {
+  margin-top: 30px;
+  text-align: center;
+}
+
+div.content div.headings p.solutions-blue-p {
+  text-align: center;
+}
+
 div.content div.headings, div.content div.blues {
   min-height: 40px;
   line-height: 40px;
@@ -565,9 +574,82 @@ div.content div.blue-block {
       -ms-flex-align: center;
           align-items: center;
   background-color: #2876B2;
-  min-width: 96%;
+  min-width: 98%;
   margin-bottom: 0;
   padding: 2%;
+}
+
+div.content div.blue-block div.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 90%;
+  margin: auto;
+}
+
+div.content div.blue-block div.card-container div.card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 0 5px 20px 5px;
+  padding: 10px 5% 5px 5%;
+  min-width: 80%;
+  min-height: 350px;
+  -webkit-box-shadow: 0 0 10px 0 #31393c;
+          box-shadow: 0 0 10px 0 #31393c;
+}
+
+div.content div.blue-block div.card-container div.card-content i.fa {
+  font-size: 85px;
+  color: #31393c;
+}
+
+div.content div.blue-block div.card-container div.card-content h3 {
+  font: 400 25px "Russo One", sans-serif;
+  color: #2D86CB;
+}
+
+div.content div.blue-block div.card-container div.card-content p {
+  font: 400 14px "open sans", sans-serif;
+  margin: 2px 0;
+}
+
+div.content div.blue-block div.card-container div.card-content a {
+  font: 400 14px "open sans", sans-serif;
+  color: #2D86CB;
+  text-decoration: underline;
+  margin: 20px 0 10px 0;
+}
+
+div.content div.blue-block div.card-container div.card-content a:hover {
+  color: #f36523;
+}
+
+div.content div.blue-block div.card-container div.card-content:hover {
+  -webkit-box-shadow: 0 0 30px 0 #31393c;
+          box-shadow: 0 0 30px 0 #31393c;
 }
 
 div.content div.blue-block div.contact-info {
@@ -651,77 +733,6 @@ div.content div.blue-block form label {
   color: #ffffff;
 }
 
-div.content div.card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-div.content div.card-container div.card-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ffffff;
-  border-radius: 5px;
-  margin: 0 25px 20px 25px;
-  padding: 10px 5% 5px 5%;
-  width: 80%;
-  min-height: 350px;
-  -webkit-box-shadow: 0 0 10px 0 #31393c;
-          box-shadow: 0 0 10px 0 #31393c;
-}
-
-div.content div.card-container div.card-content i.fa {
-  font-size: 85px;
-  color: #31393c;
-}
-
-div.content div.card-container div.card-content h3 {
-  font: 400 25px "Russo One", sans-serif;
-  color: #2D86CB;
-}
-
-div.content div.card-container div.card-content p {
-  font: 400 14px "open sans", sans-serif;
-  margin: 2px 0;
-}
-
-div.content div.card-container div.card-content a {
-  font: 400 14px "open sans", sans-serif;
-  color: #2D86CB;
-  text-decoration: underline;
-  margin: 20px 0 10px 0;
-}
-
-div.content div.card-container div.card-content a:hover {
-  color: #f36523;
-}
-
-div.content div.card-container div.card-content:hover {
-  -webkit-box-shadow: 0 0 30px 0 #31393c;
-          box-shadow: 0 0 30px 0 #31393c;
-}
-
 footer {
   background-color: #2876B2;
   height: 45px;
@@ -738,121 +749,6 @@ footer p.footer-text {
 }
 
 @media only screen and (min-width: 680px) {
-  div.block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    min-height: 350px;
-    max-width: 80%;
-    margin: 0 auto;
-  }
-  div.block div.block-image-container {
-    width: 350px;
-    height: 350px;
-    margin: 0 0 100px 0;
-  }
-  div.block div.block-image-container div.block-imgback-shape {
-    position: relative;
-    z-index: 0;
-    width: 225px;
-    height: 230px;
-    margin: 20px 0 0 150px;
-    background-color: #39A8FE;
-    border-radius: 5px;
-  }
-  div.block div.block-image-container div.shape1 {
-    margin: 20px 0 0 -25px;
-  }
-  div.block div.block-image-container img.block-top-image {
-    position: relative;
-    z-index: 1000;
-    width: 350px;
-    height: 350px;
-    margin: -210px 0 0 0;
-    -webkit-box-shadow: 1px 2px 8px 1px #31393c;
-            box-shadow: 1px 2px 8px 1px #31393c;
-  }
-  div.block img.block-top-image {
-    width: 80%;
-    height: auto;
-    margin: 0 auto 20px auto;
-  }
-  div.block div.block-text-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    max-width: 45%;
-    margin: 40px 20px;
-    padding: 20px 0 20px 0;
-  }
-  div.block div.block-text-container div.block-text {
-    min-width: 100%;
-    margin: 0 auto;
-  }
-  div.block div.block-text-container div.block-text div.h11 {
-    text-align: left;
-  }
-  div.block div.block-text-container div.block-text div.h13 {
-    text-align: left;
-    margin: 0 0 10px 0;
-  }
-  div.block div.block-text-container div.block-text div.dark {
-    color: #31393c;
-    text-shadow: none;
-  }
-  div.block div.block-text-container div.block-buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    min-width: 100%;
-  }
-  div.block div.block-text-container div.block-buttons a.buttons {
-    margin: 0;
-  }
-  div.block div.block-text-container div.block-buttons a.buttons-2 {
-    margin: 0 15px 0 0;
-  }
-  div.block div.block-text-container div.block-buttons a.solid-button:hover {
-    background-color: #e7e7e9;
-    border: 2px solid #e7e7e9;
-    color: #31393c;
-  }
-  div.block div.block-text-container div.block-buttons a.border-button {
-    background-color: rgba(244, 102, 37, 0);
-  }
-  div.block div.block-text-container div.block-buttons a.border-button:hover {
-    border: 2px solid #e7e7e9;
-  }
   div.hero {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -867,21 +763,23 @@ footer p.footer-text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-image: url("/fullsuite/images/hero.jpg");
+    /* fallback for older browsers */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 136, 205, 0.453)), to(rgba(45, 136, 205, 0.453))), url("/fullsuite/images/hero.jpg");
+    background-image: linear-gradient(to bottom, rgba(45, 136, 205, 0.453) 0%, rgba(45, 136, 205, 0.453) 100%), url("/fullsuite/images/hero.jpg");
+    min-width: 100%;
     margin: 0 auto;
     background-size: cover;
   }
   div.hero img.block-top-image {
-    width: 500px;
-    margin-top: 150px;
-    padding-top: 40px;
-    margin-right: -50px;
+    display: none;
   }
   div.hero div.block-text-container {
     padding: 290px 0 100px 200px;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1100px) {
   nav.mobile-nav {
     display: none;
   }
@@ -912,9 +810,9 @@ footer p.footer-text {
     margin: 0;
   }
   nav.desktop-nav a.brand-link img.logo {
-    margin: 5px;
-    height: 70px;
-    width: auto;
+    margin: 25px 0 0 25px;
+    width: 250px;
+    height: auto;
   }
   nav.desktop-nav ul.nav-desktop-items {
     display: -webkit-box;
@@ -951,30 +849,124 @@ footer p.footer-text {
   nav.desktop-nav ul.nav-desktop-items li.nav-item a.active {
     color: #f36523;
   }
-  div.hero {
-    min-height: 350px;
-    background-color: #2876B2;
-    min-width: 100%;
-    margin: -170px auto 0 auto;
-    z-index: 50;
+  div.content {
+    margin-bottom: 0;
   }
-  div.hero div.hero-text {
-    max-width: 450px;
+  div.content div.block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-height: 350px;
+    min-width: 544px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  div.content div.block div.block-image-container {
+    width: 350px;
+    height: 350px;
+    margin: 0 0 100px 0;
+  }
+  div.content div.block div.block-image-container div.block-imgback-shape {
+    position: relative;
+    z-index: 0;
+    width: 225px;
+    height: 230px;
+    margin: 20px 0 0 150px;
+    background-color: #39A8FE;
+    border-radius: 5px;
+  }
+  div.content div.block div.block-image-container div.shape1 {
+    margin: 20px 0 0 -25px;
+  }
+  div.content div.block div.block-image-container img.block-top-image {
+    position: relative;
+    z-index: 1000;
+    width: 350px;
+    height: 350px;
+    margin: -210px 0 0 0;
+    -webkit-box-shadow: 1px 2px 8px 1px #31393c;
+            box-shadow: 1px 2px 8px 1px #31393c;
+  }
+  div.content div.block img.block-top-image {
+    width: 80%;
+    height: auto;
+    margin: 0 auto 20px auto;
+  }
+  div.content div.block div.block-text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 50%;
+    margin: 40px 0;
+    padding: 20px 0 20px 0;
+  }
+  div.content div.block div.block-text-container div.block-text {
+    min-width: 100%;
     margin: 0 auto;
   }
-  div.hero div.hero-text span.h11 {
-    font: 700 35px "Russo One", sans-serif;
-    font-size: 40px;
+  div.content div.block div.block-text-container div.block-text div.h11 {
+    text-align: left;
   }
-  div.hero div.hero-text span.h12 {
-    font: 700 35px "Russo One", sans-serif;
-    font-size: 40px;
-    line-height: 550px;
+  div.content div.block div.block-text-container div.block-text div.h13 {
+    text-align: left;
+    margin: 0 0 10px 0;
   }
-  div.hero div.hero-text span.h13 {
-    font: 400 14px "open sans", sans-serif;
-    font-size: 40px;
-    line-height: 550px;
+  div.content div.block div.block-text-container div.block-text div.dark {
+    text-shadow: none;
+  }
+  div.content div.block div.block-text-container div.block-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-width: 100%;
+  }
+  div.content div.block div.block-text-container div.block-buttons a.buttons {
+    margin: 0;
+  }
+  div.content div.block div.block-text-container div.block-buttons a.buttons-2 {
+    margin: 0 15px 0 0;
+  }
+  div.content div.block div.block-text-container div.block-buttons a.solid-button:hover {
+    background-color: #e7e7e9;
+    border: 2px solid #e7e7e9;
+    color: #31393c;
+  }
+  div.content div.block div.block-text-container div.block-buttons a.border-button {
+    background-color: rgba(244, 102, 37, 0);
+  }
+  div.content div.block div.block-text-container div.block-buttons a.border-button:hover {
+    border: 2px solid #e7e7e9;
   }
   div.content div.blue-block {
     display: -webkit-box;
@@ -1001,9 +993,6 @@ footer p.footer-text {
   }
   div.content div.blue-block form input, div.content div.blue-block form textarea {
     min-width: 96%;
-  }
-  div.content {
-    margin-bottom: 0;
   }
   div.content div.hero-bottom {
     background-color: #2D86CB;
@@ -1035,7 +1024,20 @@ footer p.footer-text {
     max-width: 60%;
     margin: 10px auto 30px auto;
   }
-  div.content div.card-container {
+  div.content div.headings span.solutions-bluespan {
+    text-align: left;
+  }
+  div.content div.headings p.solutions-blue-p {
+    text-align: left;
+  }
+  div.content div.blue-block {
+    min-width: 80%;
+    padding: 25px 5%;
+  }
+  div.content div.blue-block div.headings {
+    max-width: 10%;
+  }
+  div.content div.blue-block div.card-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1049,8 +1051,11 @@ footer p.footer-text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    min-width: 65%;
+    max-width: 70%;
+    margin: auto;
   }
-  div.content div.card-container div.card-content {
+  div.content div.blue-block div.card-container div.card-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1073,30 +1078,67 @@ footer p.footer-text {
     -webkit-box-shadow: 0 0 10px 0 #31393c;
             box-shadow: 0 0 10px 0 #31393c;
   }
-  div.content div.card-container div.card-content i.fa {
+  div.content div.blue-block div.card-container div.card-content i.fa {
     font-size: 45px;
     color: #31393c;
   }
-  div.content div.card-container div.card-content h3 {
+  div.content div.blue-block div.card-container div.card-content h3 {
     font: 400 25px "Russo One", sans-serif;
     color: #2D86CB;
   }
-  div.content div.card-container div.card-content p {
+  div.content div.blue-block div.card-container div.card-content p {
     font: 400 14px "open sans", sans-serif;
     margin: 2px 0;
   }
-  div.content div.card-container div.card-content a {
+  div.content div.blue-block div.card-container div.card-content a {
     font: 400 14px "open sans", sans-serif;
     color: #2D86CB;
     text-decoration: underline;
     margin: 20px 0 10px 0;
   }
-  div.content div.card-container div.card-content a:hover {
+  div.content div.blue-block div.card-container div.card-content a:hover {
     color: #f36523;
   }
-  div.content div.card-container div.card-content:hover {
+  div.content div.blue-block div.card-container div.card-content:hover {
     -webkit-box-shadow: 0 0 30px 0 #31393c;
             box-shadow: 0 0 30px 0 #31393c;
+  }
+  div.hero {
+    min-height: 350px;
+    background-color: #2876B2;
+    min-width: 100%;
+    margin: -170px auto 0 auto;
+    z-index: 50;
+  }
+  div.hero div.hero-block-text-container {
+    border: 1px solid #39A8FE;
+  }
+  div.hero div.hero-block-text-container div.hero-text {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  div.hero div.hero-block-text-container div.hero-text div.h11 {
+    font: 700 35px "Russo One", sans-serif;
+    font-size: 40px;
+    text-align: left;
+  }
+  div.hero div.hero-block-text-container div.hero-text div.h12 {
+    font: 700 35px "Russo One", sans-serif;
+    font-size: 40px;
+    line-height: 550px;
+    text-align: left;
+  }
+  div.hero div.hero-block-text-container div.hero-text div.h13 {
+    font: 400 14px "open sans", sans-serif;
+    font-size: 40px;
+    text-align: left;
+  }
+  div.hero img.block-top-image {
+    display: inline-block;
+    width: 500px;
+    margin-top: 150px;
+    padding-top: 40px;
+    margin-right: -50px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

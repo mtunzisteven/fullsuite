@@ -4,13 +4,17 @@
 $background_color: #39A8FE;
 $background_color1: #2876B2;
 $background_color2: #2D86CB;
+$background_color12: #436383;
+$background_color22: #2f4a64;
+$background_color2b: rgba(45, 136, 205, 0.453);
 $background_color3:#f36523;
 $button_current_link_color: $background_color3;
 $button_link_hover_color:#e7e7e9;
+$button_link_hover_color2:rgba(231, 231, 233, 0.8);
 $light_color:#ffffff;
 $light_dark_color:#31393c;
 $dark_color:#000000;
-$hero_overlay:rgba(255,255,255,0.7);
+$hero_overlay:linear-gradient(to bottom, $background_color2b 0%,$background_color2b 100%);
 $box-shadow:1px 2px 8px 1px $light_dark_color;
 
 
@@ -404,6 +408,15 @@ div.content{
             margin-top: 20px;
 
         }
+
+        & span.solutions-bluespan{
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        & p.solutions-blue-p{
+            text-align: center;
+        }
     }
 
     & div.headings, div.blues{
@@ -495,9 +508,59 @@ div.content{
     & div.blue-block{
         @include flex(column, center, center);
         background-color: $background_color1;
-        min-width:96%;
+        min-width: 98%;
         margin-bottom: 0;
         padding: 2%;
+
+        & div.card-container{
+            @include flex(column, center, center);
+            min-width: 90%;
+            margin:auto;
+        
+            & div.card-content{
+                @include flex(column, center, center);
+                background-color: $light_color;
+                border-radius: 5px;
+                margin: 0 5px 20px 5px;
+                padding: 10px 5% 5px 5%;
+                min-width: 80%;
+                min-height: 350px;
+                box-shadow: 0 0 10px 0 $light-dark_color;
+    
+                & i.fa{
+                    font-size: 85px;
+                    color:$light-dark_color
+                }
+        
+                & h3{
+                    font:$h3_font;
+                    color:$background_color2;
+    
+                }
+        
+                & p{
+                    font:$p_font_size;
+                    margin: 2px 0;
+                }
+        
+                & a{
+                    font:$p_font_size;
+                    color:$background_color2;
+                    text-decoration: underline;
+                    margin: 20px 0 10px 0;    
+                }
+    
+                & a:hover{
+                    color:$background_color3;
+                }
+        
+            }
+    
+            & div.card-content:hover{
+                box-shadow: 0 0 30px 0 $light-dark_color;
+            }
+    
+        }
 
         & div.contact-info{
             @include flex(column, left, flex-start);
@@ -558,53 +621,7 @@ div.content{
         }
     }
 
-    & div.card-container{
-        @include flex(column, center, center);
     
-        & div.card-content{
-            @include flex(column, center, center);
-            background-color: $light_color;
-            border-radius: 5px;
-            margin: 0 25px 20px 25px;
-            padding: 10px 5% 5px 5%;
-            width: 80%;
-            min-height: 350px;
-            box-shadow: 0 0 10px 0 $light-dark_color;
-
-            & i.fa{
-                font-size: 85px;
-                color:$light-dark_color
-            }
-    
-            & h3{
-                font:$h3_font;
-                color:$background_color2;
-
-            }
-    
-            & p{
-                font:$p_font_size;
-                margin: 2px 0;
-            }
-    
-            & a{
-                font:$p_font_size;
-                color:$background_color2;
-                text-decoration: underline;
-                margin: 20px 0 10px 0;    
-            }
-
-            & a:hover{
-                color:$background_color3;
-            }
-    
-        }
-
-        & div.card-content:hover{
-            box-shadow: 0 0 30px 0 $light-dark_color;
-        }
-
-    }
 }
 
 
@@ -631,11 +648,100 @@ footer{
 
 @media only screen and (min-width: 680px){
 
+        
+    div.hero{
+        @include flex(row, space-between, center);
+        background-image: url('/fullsuite/images/hero.jpg'); /* fallback for older browsers */
+        background-image: $hero_overlay, url('/fullsuite/images/hero.jpg');
+        min-width: 100%;
+        margin: 0 auto;
+        background-size: cover;
+
+        & img.block-top-image{
+            display: none;
+        }
+    
+        & div.block-text-container{
+            padding: 290px 0 100px 200px;        }
+    }
+
+}
+
+//---------------------------------------------------------------
+//                           Desktop                             |
+//---------------------------------------------------------------
+
+@media only screen and (min-width: 1100px){
+
+
+    nav.mobile-nav{
+        display:none;
+    }
+
+    nav.desktop-nav{
+        @include flex(row, space-between, center);
+        background: rgba(104, 146, 109, 0);
+        min-width: 100%;
+        max-height: 80px;
+        margin:0;
+        padding:5px 0 0 0;
+
+        & a.brand-link{
+            display: block;
+            max-width: 9%;
+            padding: 3px 0.5%;
+            margin:0;
+
+            & img.logo{
+                margin:25px 0 0 25px;
+                width: 250px;
+                height: auto;
+            }
+        }
+
+        & ul.nav-desktop-items{
+            @include flex(row, space-between center);
+            background: rgba(104, 146, 109, 0);
+            max-width: 50%;
+            padding: 0 0 0 40%;
+            margin-right: 0;
+            
+            & li.nav-item{
+                background: rgba(104, 146, 109, 0);
+                max-height:0;
+
+
+                & a.nav-link{
+                    color:$light_color;
+                    font: $p_font_size;
+                    font-size: 16px;
+                    font-weight: 900;
+
+                }
+
+                & a.nav-link:hover{
+                    color:$background_color;
+
+                }
+
+                & a.active{
+                    color: $background_color3;
+
+                }
+            }
+        }
+    }
+
+div.content{
+    margin-bottom: 0;
+    
     div.block{
-        @include flex(row-reverse, center, center);
+        @include flex(row-reverse, space-between, flex-start);
         min-height: 350px;
+        min-width: 544px;
         max-width: 80%;
         margin: 0 auto;
+        padding: 0;
     
         & div.block-image-container{
             width: 350px;
@@ -677,8 +783,8 @@ footer{
     
         & div.block-text-container{
             @include flex(column, center, center);
-            max-width: 45%;
-            margin: 40px 20px;
+            max-width: 50%;
+            margin: 40px 0;
             padding: 20px 0 20px 0;
     
             & div.block-text{
@@ -691,11 +797,10 @@ footer{
                 
                 & div.h13{
                     text-align: left;
-                    margin: 0 0 10px 0;    
+                    margin: 0 0 10px 0;   
                 }
     
                 & div.dark{
-                    color:$light_dark_color;
                     text-shadow:none;
                 }
             }  
@@ -729,127 +834,6 @@ footer{
         }
     
     }
-    
-    
-    div.hero{
-        @include flex(row, space-between, center);
-        margin: 0 auto;
-        background-size: cover;
-
-        & img.block-top-image{
-            width:500px;
-            margin-top: 150px;
-            padding-top: 40px;
-            margin-right: -50px;
-
-        }
-    
-        & div.block-text-container{
-            padding: 290px 0 100px 200px;        }
-    }
-
-}
-
-//---------------------------------------------------------------
-//                           Desktop                             |
-//---------------------------------------------------------------
-
-@media only screen and (min-width: 1024px){
-
-
-    nav.mobile-nav{
-        display:none;
-    }
-
-    nav.desktop-nav{
-        @include flex(row, space-between, center);
-        background: rgba(104, 146, 109, 0);
-        min-width: 100%;
-        max-height: 80px;
-        margin:0;
-        padding:5px 0 0 0;
-
-        & a.brand-link{
-            display: block;
-            max-width: 9%;
-            padding: 3px 0.5%;
-            margin:0;
-
-            & img.logo{
-                margin:5px;
-                height: 70px;
-                width: auto;
-            }
-        }
-
-        & ul.nav-desktop-items{
-            @include flex(row, space-between center);
-            background: rgba(104, 146, 109, 0);
-            max-width: 50%;
-            padding: 0 0 0 40%;
-            margin-right: 0;
-            
-            & li.nav-item{
-                background: rgba(104, 146, 109, 0);
-                max-height:0;
-
-
-                & a.nav-link{
-                    color:$light_color;
-                    font: $p_font_size;
-                    font-size: 16px;
-                    font-weight: 900;
-
-                }
-
-                & a.nav-link:hover{
-                    color:$background_color;
-
-                }
-
-                & a.active{
-                    color: $background_color3;
-
-                }
-            }
-        }
-    }
-
-
-    div.hero{
-        min-height: 350px;
-        background-color: $background_color1;
-        min-width: 100%;
-        margin: -170px auto 0 auto;
-        z-index:50;
-
-
-        & div.hero-text{
-            max-width: 450px;
-            margin: 0 auto; 
-
-            & span.h11{
-                font: $h1_font;
-                font-size: 40px; 
-            }
-            
-            & span.h12{
-                font: $h1_font;
-                font-size: 40px; 
-                line-height: 550px;
-
-            }
-            
-            & span.h13{
-                font: $p_font_size;
-                font-size: 40px; 
-                line-height: 550px;
-
-            }
-        }        
-    }
-
-div.content{
 
     div.blue-block{
         @include flex(row, space-between, flex-start);
@@ -867,10 +851,6 @@ div.content{
             }
         }
     }
-}
-
-div.content{
-    margin-bottom: 0;
 
     & div.hero-bottom{
         background-color: $background_color2;
@@ -903,52 +883,121 @@ div.content{
 
     }
 
-    & div.card-container{
-        @include flex(row, center, center);
     
-        & div.card-content{
-            @include flex(column, center, center);
-            background-color: $light_color;
-            border-radius: 5px;
-            margin: 0 25px 20px 25px;
-            padding: 10px 15px 5px 15px;
-            min-width: 250px;
-            min-height: 350px;
-            box-shadow: 0 0 10px 0 $light-dark_color;
+    & div.headings{
+        & span.solutions-bluespan{
+            text-align: left;
+        }
 
-            & i.fa{
-                font-size: 45px;
-                color:$light-dark_color
-            }
-    
-            & h3{
-                font:$h3_font;
-                color:$background_color2;
+        & p.solutions-blue-p{
+            text-align: left;
+        }
+    }
+    div.blue-block{
+        min-width: 80%;
+        padding: 25px 5%;
 
-            }
-    
-            & p{
-                font:$p_font_size;
-                margin: 2px 0;
-            }
-    
-            & a{
-                font:$p_font_size;
-                color:$background_color2;
-                text-decoration: underline;
-                margin: 20px 0 10px 0;    
-            }
+        & div.headings{
+            max-width: 10%;
+        }
 
-            & a:hover{
-                color:$background_color3;
+        & div.card-container{
+            @include flex(row, center, center);
+            min-width: 65%;
+            max-width: 70%;
+            margin:auto;
+        
+            & div.card-content{
+                @include flex(column, center, center);
+                background-color: $light_color;
+                border-radius: 5px;
+                margin: 0 25px 20px 25px;
+                padding: 10px 15px 5px 15px;
+                min-width: 250px;
+                min-height: 350px;
+                box-shadow: 0 0 10px 0 $light-dark_color;
+    
+                & i.fa{
+                    font-size: 45px;
+                    color:$light-dark_color
+                }
+        
+                & h3{
+                    font:$h3_font;
+                    color:$background_color2;
+    
+                }
+        
+                & p{
+                    font:$p_font_size;
+                    margin: 2px 0;
+                }
+        
+                & a{
+                    font:$p_font_size;
+                    color:$background_color2;
+                    text-decoration: underline;
+                    margin: 20px 0 10px 0;    
+                }
+    
+                & a:hover{
+                    color:$background_color3;
+                }
+        
+            }
+    
+            & div.card-content:hover{
+                box-shadow: 0 0 30px 0 $light-dark_color;
             }
     
         }
+    }
+}
 
-        & div.card-content:hover{
-            box-shadow: 0 0 30px 0 $light-dark_color;
-        }
 
+div.hero{
+    min-height: 350px;
+    background-color: $background_color1;
+    min-width: 100%;
+    margin: -170px auto 0 auto;
+    z-index:50;
+
+    & div.hero-block-text-container{
+        border: 1px solid $background_color;
+
+        & div.hero-text{
+            max-width: 450px;
+            margin: 0 auto; 
+
+            & div.h11{
+                font: $h1_font;
+                font-size: 40px; 
+                text-align: left;
+            }
+            
+            & div.h12{
+                font: $h1_font;
+                font-size: 40px; 
+                line-height: 550px;
+                text-align: left;
+
+            }
+            
+            & div.h13{
+                font: $p_font_size;
+                font-size: 40px; 
+                text-align: left;
+
+            }
+        }  
+    }
+
+    & img.block-top-image{   
+        display: inline-block;   
+        width:500px;
+        margin-top: 150px;
+        padding-top: 40px;
+        margin-right: -50px;
     }
 }
 

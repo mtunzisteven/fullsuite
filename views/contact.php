@@ -9,7 +9,7 @@ $pageShortSummary="";
 <html lang="en-us">
     <?php
 
-        include "../snippets/head.php";
+        require $_SERVER['DOCUMENT_ROOT'] .  "/fullsuite/snippets/head.php";
         
     ?>
 
@@ -17,38 +17,39 @@ $pageShortSummary="";
         <div class="wrapper">
             <?php
 
-                    include "../snippets/navigation.php";
+                    require $_SERVER['DOCUMENT_ROOT'] .  "/fullsuite/snippets/navigation.php";
 
             ?>
             
-            <div class="hero">
-                <div class="hero-text contact">
-                    <span class="h11">Contact </span>
-                    <span class="h13">Us</span>
+            <div class="hero block">
+                <div class="block-text-container hero-block-text-container">
+                    <div class="block-text">
+                        <div class="h11 about">Contact Us</div>
+                    </div>
                 </div>
             </div>
 
             <div class="content">
-                <div class="blue-block">
-
-                    <form>
-
-                        <label>Your Name(required)</label><input type="text" name="name" required />
-                        <label>Your Email(required)</label><input type="email" name="email" required />
-                        <label>Subject</label><input type="text" name="subject" required />
-                        <label>Your Message</label><textarea name="message" rows="12" required ></textarea>
-
-                        <input type="submit" class="send-button" value="SEND" />
-
-                        <div id="response-div"></div>
-
-                    </form>
+                <div class="block">
+                    <div class="block-text-container">
+                        <div class="block-text">
+                            <div class="h11 dark">Title Text </div>
+                            <div class="h13 dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                        <div class="block-buttons">
+                            <a href='#' class="buttons solid-button">Our Services</a>
+                        </div>
+                    </div>
+                    <div class='block-image-container'>
+                        <div class='block-imgback-shape shape1'>&nbsp;</div>
+                        <img class='block-top-image' src='/fullsuite/images/phone.jpg' alt='hero image' />
+                    </div>
                 </div>
             </div>
 
             <?php 
                 
-                include "../snippets/footer.php"; 
+                require $_SERVER['DOCUMENT_ROOT'] .  "/fullsuite/snippets/footer.php"; 
                 
             ?> 
         </div>
