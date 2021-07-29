@@ -339,13 +339,15 @@ div.block div.block-text-container div.block-buttons {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  min-width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 60%;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 div.block div.block-text-container div.block-buttons a.buttons {
@@ -380,15 +382,34 @@ div.block div.block-text-container div.block-buttons a.border-button:hover {
 }
 
 div.hero {
-  background-color: #2D86CB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("/fullsuite/images/hero.jpg");
+  /* fallback for older browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 136, 205, 0.453)), to(rgba(45, 136, 205, 0.453))), url("/fullsuite/images/hero.jpg");
+  background-image: linear-gradient(to bottom, rgba(45, 136, 205, 0.453) 0%, rgba(45, 136, 205, 0.453) 100%), url("/fullsuite/images/hero.jpg");
   min-width: 100%;
-  width: 100%;
   margin: 0 auto;
   background-size: cover;
 }
 
 div.hero div.block-text-container {
   padding: 250px 0 50px 0;
+}
+
+div.hero img {
+  display: none;
 }
 
 div.content {
@@ -593,7 +614,8 @@ div.content div.blue-block div.card-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 90%;
+  width: 90%;
+  max-width: 450px;
   margin: auto;
 }
 
@@ -622,18 +644,47 @@ div.content div.blue-block div.card-container div.card-content {
 }
 
 div.content div.blue-block div.card-container div.card-content i.fa {
-  font-size: 85px;
-  color: #31393c;
+  font-size: 60px;
+  color: #436383;
 }
 
-div.content div.blue-block div.card-container div.card-content h3 {
-  font: 400 25px "Russo One", sans-serif;
-  color: #2D86CB;
+div.content div.blue-block div.card-container div.card-content h5.card-title {
+  font: 400 14px "Crimson Text", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #436383;
 }
 
-div.content div.blue-block div.card-container div.card-content p {
+div.content div.blue-block div.card-container div.card-content div.card-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-width: 90%;
+  margin: 5px 5px 5px 90px;
+}
+
+div.content div.blue-block div.card-container div.card-content div.card-item-container p.card-item {
   font: 400 14px "open sans", sans-serif;
-  margin: 2px 0;
+  min-width: 100%;
+  font-weight: 700;
+  text-align: left;
+  margin: 2px 0 2px 5px;
+}
+
+div.content div.blue-block div.card-container div.card-content div.card-item-container i.fa {
+  font-size: 18px;
+  color: #436383;
+  text-align: left;
 }
 
 div.content div.blue-block div.card-container div.card-content a {
@@ -641,6 +692,7 @@ div.content div.blue-block div.card-container div.card-content a {
   color: #2D86CB;
   text-decoration: underline;
   margin: 20px 0 10px 0;
+  font-weight: 700;
 }
 
 div.content div.blue-block div.card-container div.card-content a:hover {
@@ -774,8 +826,9 @@ footer p.footer-text {
   div.hero img.block-top-image {
     display: none;
   }
-  div.hero div.block-text-container {
-    padding: 290px 0 100px 200px;
+  div.hero div.block-text-container div.block-buttons {
+    min-width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -950,6 +1003,7 @@ footer p.footer-text {
         -ms-flex-align: start;
             align-items: flex-start;
     min-width: 100%;
+    max-width: 100%;
   }
   div.content div.block div.block-text-container div.block-buttons a.buttons {
     margin: 0;
@@ -1078,14 +1132,6 @@ footer p.footer-text {
     -webkit-box-shadow: 0 0 10px 0 #31393c;
             box-shadow: 0 0 10px 0 #31393c;
   }
-  div.content div.blue-block div.card-container div.card-content i.fa {
-    font-size: 45px;
-    color: #31393c;
-  }
-  div.content div.blue-block div.card-container div.card-content h3 {
-    font: 400 25px "Russo One", sans-serif;
-    color: #2D86CB;
-  }
   div.content div.blue-block div.card-container div.card-content p {
     font: 400 14px "open sans", sans-serif;
     margin: 2px 0;
@@ -1110,9 +1156,6 @@ footer p.footer-text {
     margin: -170px auto 0 auto;
     z-index: 50;
   }
-  div.hero div.hero-block-text-container {
-    border: 1px solid #39A8FE;
-  }
   div.hero div.hero-block-text-container div.hero-text {
     max-width: 450px;
     margin: 0 auto;
@@ -1132,6 +1175,11 @@ footer p.footer-text {
     font: 400 14px "open sans", sans-serif;
     font-size: 40px;
     text-align: left;
+  }
+  div.hero div.hero-block-text-container div.block-buttons {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
   div.hero img.block-top-image {
     display: inline-block;

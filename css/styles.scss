@@ -338,9 +338,11 @@ div.block{
         }  
         
         & div.block-buttons{
-            @include flex();
-            min-width: 100%;
-    
+            @include flex(row, center, center);
+            min-width: 60%;
+            max-width: 60%;
+            margin: 0 auto;
+
             & a.buttons{
                 @include buttons();
                 margin: 0 auto;
@@ -371,14 +373,19 @@ div.block{
 
 
 div.hero{
-    background-color:$background_color2;
+    @include flex(row, space-between, center);
+    background-image: url('/fullsuite/images/hero.jpg'); /* fallback for older browsers */
+    background-image: $hero_overlay, url('/fullsuite/images/hero.jpg');
     min-width: 100%;
-    width: 100%;
     margin: 0 auto;
     background-size: cover;
 
     & div.block-text-container{
         padding: 250px 0 50px 0;
+    }
+
+    & img{
+        display: none;
     }
 }
 
@@ -514,7 +521,8 @@ div.content{
 
         & div.card-container{
             @include flex(column, center, center);
-            min-width: 90%;
+            width: 90%;
+            max-width: 450px;
             margin:auto;
         
             & div.card-content{
@@ -528,26 +536,43 @@ div.content{
                 box-shadow: 0 0 10px 0 $light-dark_color;
     
                 & i.fa{
-                    font-size: 85px;
-                    color:$light-dark_color
+                    font-size: 60px;
+                    color:$background_color12;
                 }
         
-                & h3{
-                    font:$h3_font;
-                    color:$background_color2;
-    
+                & h5.card-title{
+                    font: $pserif_font_size;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: $background_color12;
                 }
-        
-                & p{
-                    font:$p_font_size;
-                    margin: 2px 0;
+
+                & div.card-item-container{
+                    @include flex();
+                    min-width: 90%;
+                    margin: 5px 5px 5px 90px;
+
+                    & p.card-item{
+                        font:$p_font_size; 
+                        min-width: 100%;
+                        font-weight: 700;
+                        text-align: left;
+                        margin: 2px 0 2px 5px;
+
+                    }
+                    & i.fa{
+                        font-size: 18px;
+                        color:$background_color12;
+                        text-align: left;
+                    }
                 }
-        
+
                 & a{
                     font:$p_font_size;
                     color:$background_color2;
                     text-decoration: underline;
                     margin: 20px 0 10px 0;    
+                    font-weight: 700;
                 }
     
                 & a:hover{
@@ -648,7 +673,6 @@ footer{
 
 @media only screen and (min-width: 680px){
 
-        
     div.hero{
         @include flex(row, space-between, center);
         background-image: url('/fullsuite/images/hero.jpg'); /* fallback for older browsers */
@@ -662,7 +686,12 @@ footer{
         }
     
         & div.block-text-container{
-            padding: 290px 0 100px 200px;        }
+            
+            & div.block-buttons{
+                min-width: 100%;
+                margin: 0 auto;
+            }
+        }
     }
 
 }
@@ -808,7 +837,8 @@ div.content{
             & div.block-buttons{
                 @include flex();
                 min-width: 100%;
-        
+                max-width: 100%;                    
+
                 & a.buttons{
                     margin: 0;
                 }
@@ -916,17 +946,6 @@ div.content{
                 min-width: 250px;
                 min-height: 350px;
                 box-shadow: 0 0 10px 0 $light-dark_color;
-    
-                & i.fa{
-                    font-size: 45px;
-                    color:$light-dark_color
-                }
-        
-                & h3{
-                    font:$h3_font;
-                    color:$background_color2;
-    
-                }
         
                 & p{
                     font:$p_font_size;
@@ -963,7 +982,6 @@ div.hero{
     z-index:50;
 
     & div.hero-block-text-container{
-        border: 1px solid $background_color;
 
         & div.hero-text{
             max-width: 450px;
@@ -990,6 +1008,11 @@ div.hero{
 
             }
         }  
+
+        & div.block-buttons{
+            justify-content: left;
+
+        }
     }
 
     & img.block-top-image{   

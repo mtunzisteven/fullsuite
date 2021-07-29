@@ -61,36 +61,35 @@ $pageShortSummary="";
                     <div class="card-container">      
 
                         <div class="card-content">
-                            <i class="fa fa-image"></i>
-                            <h3 class="cart=d-title">Solution 1</h3>
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
+                            <i class="fa fa-phone-square"></i>
+
+                            <h5 class="card-title">Tailor Made PBX/PABX Systems</h5>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Multiple lines</p ></div>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Multiple extensions</p ></div>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Management system</p ></div>
+
                             <a href='#' class="card-link">Learn More</a >
                         </div >
 
                         <div class="card-content">
-                            <i class="fa fa-image"></i>
-                            <h3 class="cart=d-title">Solution 2</h3>
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
+                            <i class="fa fa-wifi"></i>
+
+                            <h5 class="card-title">Voice and Data Solutions</h5>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Wide area network</p ></div>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Local area network</p ></div>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Wifi Solution</p ></div>
+
                             <a href='#' class="card-link">Learn More</a >
                         </div >
 
                         <div class="card-content">
-                            <i class="fa fa-image"></i>
-                            <h3 class="cart=d-title">Solution 3</h3>
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-                            <p class="card-content">contents</p >
-
+                            <i class="fa fa-briefcase"></i>
+                            
+                            <h5 class="card-title">Small Business Solutions</h5>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Easy setup</p ></div>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Keep your number</p ></div>
+                            <div class='card-item-container'><i class="fa fa-check"></i><p class="card-item"> Free minutes</p ></div>
+   
                             <a href='#' class="card-link">Learn More</a >
                         </div >
                     </div>
