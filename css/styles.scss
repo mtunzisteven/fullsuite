@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Open+Sans:wght@300&family=Russo+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&family=Teko:wght@500&display=swap');
 //--------------------------------Colors
 $background_color: #39A8FE;
 $background_color1: #2876B2;
@@ -14,6 +13,7 @@ $button_link_hover_color2:rgba(231, 231, 233, 0.8);
 $light_color:#ffffff;
 $light_dark_color:#31393c;
 $dark_color:#000000;
+$nobackground: #00000000;
 $hero_overlay:linear-gradient(to bottom, $background_color2b 0%,$background_color2b 100%);
 $box-shadow:1px 2px 8px 1px $light_dark_color;
 
@@ -22,14 +22,14 @@ $box-shadow:1px 2px 8px 1px $light_dark_color;
 $color_gradient: linear-gradient(130deg, $background_color2, $background_color);
 
 //--------------------------------Typography
-$h1_font:700 35px 'Russo One', sans-serif;
-$h2_font:600 18px 'Russo One', sans-serif;
-$h3_font:400 25px 'Russo One', sans-serif;
-$h4_font:500 22px 'open sans', sans-serif;
-$h5_font:500 14px 'open sans', sans-serif;
-$p_font_size:400 14px  'open sans', sans-serif;
-$pserif_font_size:400 14px  'Crimson Text', serif;
-$button_font:400 16px 'open sans', sans-serif; 
+$h1_font:700 60px 'Teko', sans-serif;
+$h2_font:600 18px 'Teko', sans-serif;
+$h3_font:400 25px 'Teko', sans-serif;
+$h4_font:500 22px 'Montserrat', sans-serif;
+$h5_font:500 14px 'Montserrat', sans-serif;
+$p_font_size:400 14px  'Montserrat', sans-serif;
+$pserif_font_size:400 14px  'Roboto', sans-serif;
+$button_font:400 16px 'Montserrat', sans-serif; 
 
 $text-shadow: 1px 1px 1px $light_dark_color;
 
@@ -68,7 +68,7 @@ $Horizontal-padding:$Vertical-padding*2;
     line-height: 40px;
     width: 100%;
     max-width: 100%;
-    margin: 30px auto 20px auto;
+    margin: 60px auto 40px auto;
     padding:0;
     background-color: $background;
 }
@@ -78,7 +78,7 @@ $Horizontal-padding:$Vertical-padding*2;
     min-width: 100%;
     font:$h4_font;
     font-weight: 700;
-    color:$light-dark_color;
+    color:$light_dark_color;
     text-align:center;
     text-shadow: $text-shadow;
 }
@@ -94,6 +94,37 @@ $Horizontal-padding:$Vertical-padding*2;
     box-shadow: $box-shadow;
 }
 
+//hero background
+@mixin herobackground(){
+    background-image: url('/fullsuite/images/hero.jpg'); /* fallback for older browsers */
+    background-image: $hero_overlay, url('/fullsuite/images/hero.jpg');
+    background-attachment: scroll;//|fixed;*///|local|initial|inherit;
+    min-width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: none;
+}
+
+@mixin herocontent(){
+    @include flex(row, space-between, center);
+    min-width: 100%;
+    margin: 0 auto;
+
+    & div.block-text-container{
+        padding: 250px 0 50px 0;
+    }
+
+    & img{
+        display: none;
+    }
+
+    & div.block-buttons{
+        & a{
+            text-decoration: none;
+        }
+    }
+}
 
 body{
     color:$light_dark_color;
@@ -105,7 +136,8 @@ body{
     overflow-x: hidden;
     min-width: 100%;
     max-width: 1200px;
-
+    margin:0 auto;
+    padding: 0;
 }
 
 
@@ -187,19 +219,19 @@ nav.mobile{
 
     & div.fa-bars-container{
         width: 45%;
-        padding-right: 5%;        
+        padding-right: 0;        
         text-align: right;
 
         & i.fa{
             text-align: right;
             font-size: 30px;
-            color: $background_color;
+            color: $background_color2;
             line-height: 105px;
             cursor: pointer;
         }
 
         & i.fa:hover{
-            color: $background_color2;
+            color: $background_color;
         }
     }
 }
@@ -271,6 +303,22 @@ div.block{
     min-width: 100%;
     margin: 20px 0 10px 0;
 
+    & form{
+        margin: 60px auto;
+        padding: 5px;
+        border-radius: 3px;
+        border: $button_link_hover_color solid 1px;
+        max-width: 95%;
+    }
+
+    & .buttons{
+        @include buttons();
+    }
+    & .buttons:hover{
+        background-color: $button_link_hover_color;
+        color:$light_dark_color;
+    }
+
     & div.block-image-container{
         width: 200px;
         height: 200px;
@@ -320,6 +368,10 @@ div.block{
                 text-align: center;
                 color: $light_color;
                 text-shadow: $light_dark_color 0 1px 20px;
+                min-width: 200px;
+                max-width: 80%;
+                margin: 10px auto;
+
             }
             
             & div.h13{
@@ -328,7 +380,7 @@ div.block{
                 text-align: center;
                 color: $light_color;
                 text-shadow: $light_dark_color 0 1px 20px;
-                margin: 0 0 10px 0;    
+                margin: 15px 0 10px 0;   
             }
 
             & div.dark{
@@ -343,20 +395,21 @@ div.block{
             max-width: 60%;
             margin: 0 auto;
 
-            & a.buttons{
+            & .buttons{
                 @include buttons();
                 margin: 0 auto;
                 border: 2px solid $background_color3; 
+                text-decoration: none;
             }
 
-            & a.buttons-2{
+            & .buttons-2{
                 margin: 0 15px 0 0;
             }
     
-            & a.solid-button:hover{
+            & .solid-button:hover{
                 background-color:$button_link_hover_color;
                 border: 2px solid $button_link_hover_color; 
-                color: $light-dark_color;
+                color: $light_dark_color;
             }
     
             & a.border-button{
@@ -368,24 +421,58 @@ div.block{
             }
         }
     }
+}
+
+div.about-block{
+    @include flex();
+
+    & div.about-block-text-container{
+        max-width: 90%;
+        padding: 5%;
+
+        & div.about-block-text{
+            min-width: 100%;
+            margin: 0 auto; 
+            text-align: left;
+
+            & div.h11{
+                max-width: 100%;
+                margin: 0;
+                text-align: left;
+
+            }
+            
+            & div.h13{
+                max-width: 100%;
+                text-align: left;
+
+            }
+        }  
+    }
+}
+
+div.other-hero{
+    @include herobackground();
+    @include herocontent();
 
 }
 
 
-div.hero{
-    @include flex(row, space-between, center);
-    background-image: url('/fullsuite/images/hero.jpg'); /* fallback for older browsers */
-    background-image: $hero_overlay, url('/fullsuite/images/hero.jpg');
-    min-width: 100%;
-    margin: 0 auto;
-    background-size: cover;
+main{
+    @include herobackground();
 
-    & div.block-text-container{
-        padding: 250px 0 50px 0;
+    div.carousel-indicators{
+        margin: auto;
     }
+    
+    div.carousel-inner {
 
-    & img{
-        display: none;
+
+        div.carousel-item{
+            div.hero{
+                @include herocontent();
+            }
+        }
     }
 }
 
@@ -512,6 +599,104 @@ div.content{
         }
     }
 
+    & div.blue-strap{
+        min-width: 100%;
+        margin: 0 0 20px 0;
+        padding: 40px 10% 30px 10%;
+        background-color: $background_color1;
+        
+        & div.block-text-container{
+            @include flex(column, space-between center);
+            max-width: 50%;
+            margin: 5px 0;
+            padding: 5px 0 20px 0;
+    
+            & div.block-text{
+                min-width: 100%;
+                margin: 0 auto; 
+        
+                & div.h11{
+                    text-align: left;
+                    max-width: 80%;
+                    margin: 10px auto;
+
+                }
+                
+                & div.h13{
+                    text-align: left;
+                    margin: 15px 0 10px 0;   
+                }
+    
+                & div.dark{
+                    text-shadow:none;
+                }
+            }  
+            
+            & div.block-buttons{
+                @include flex();
+                min-width: 100%;
+                max-width: 100%;                    
+
+                & .buttons{
+                    margin: 0;
+                }
+    
+                & .buttons-2{
+                    margin: 0 15px 0 0;
+                }
+        
+                & .solid-button:hover{
+                    background-color:$button_link_hover_color;
+                    border: 2px solid $button_link_hover_color; 
+                    color: $light_dark_color;
+                }
+        
+                & a.border-button{
+                    background-color: hsla(19, 90%, 55%, 0);
+                }
+        
+                & a.border-button:hover{
+                    border: 2px solid $button_link_hover_color; 
+                }
+            }
+        }
+
+        & h2{
+            font: $h3_font;
+            font-size: 34px;
+            font-weight: 700;
+            color:$light_color;
+        }
+
+        & h3{
+            font: $h5_font;
+            font-weight: 700;
+            font-size: 20px;
+            color:$light_color;
+        }
+
+        & p{
+            font: $p_font_size;
+            color:$light_color;
+        }
+
+        & div.icon-square{
+            border: none;
+            background-color: $background_color1;
+
+            & i.bi{
+                background-color: $background_color1;
+                color:$light_color;
+                border: none;
+            }
+        }
+
+        & p.largep{
+            font-size: 25px; 
+        }
+
+    }
+
     & div.blue-block{
         @include flex(column, center, center);
         background-color: $background_color1;
@@ -521,8 +706,8 @@ div.content{
 
         & div.card-container{
             @include flex(column, center, center);
-            width: 90%;
-            max-width: 450px;
+            width: 100%;
+            max-width: 300px;
             margin:auto;
         
             & div.card-content{
@@ -530,27 +715,30 @@ div.content{
                 background-color: $light_color;
                 border-radius: 5px;
                 margin: 0 5px 20px 5px;
-                padding: 10px 5% 5px 5%;
-                min-width: 80%;
+                padding: 10% auto 5px 10%;
+                width: 80%;
                 min-height: 350px;
-                box-shadow: 0 0 10px 0 $light-dark_color;
+                max-width: 300px;
+                box-shadow: 0 0 10px 0 $light_dark_color;
     
-                & i.fa{
+                & i.bi{
                     font-size: 60px;
-                    color:$background_color12;
+                    color:$background_color2;
+                    margin: 5px 0 10px;
                 }
         
                 & h5.card-title{
                     font: $pserif_font_size;
                     font-size: 18px;
                     font-weight: 700;
-                    color: $background_color12;
+                    color: $background_color2;
+                    text-align: center;
                 }
 
                 & div.card-item-container{
                     @include flex();
                     min-width: 90%;
-                    margin: 5px 5px 5px 90px;
+                    margin: 1px 5px 1px 50px;
 
                     & p.card-item{
                         font:$p_font_size; 
@@ -558,18 +746,19 @@ div.content{
                         font-weight: 700;
                         text-align: left;
                         margin: 2px 0 2px 5px;
+                        color: $dark_color;
 
                     }
-                    & i.fa{
-                        font-size: 18px;
-                        color:$background_color12;
+                    & i.bi{
+                        font-size: 8px;
+                        color:$background_color2;
                         text-align: left;
                     }
                 }
 
                 & a{
                     font:$p_font_size;
-                    color:$background_color2;
+                    color:$background_color12;
                     text-decoration: underline;
                     margin: 20px 0 10px 0;    
                     font-weight: 700;
@@ -582,7 +771,7 @@ div.content{
             }
     
             & div.card-content:hover{
-                box-shadow: 0 0 30px 0 $light-dark_color;
+                box-shadow: 0 0 30px 0 $light_dark_color;
             }
     
         }
@@ -646,10 +835,126 @@ div.content{
         }
     }
 
-    
+    & .partners-block{
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        max-width: 90%;
+        height: 120px;
+        padding: 0 5%;
+        margin: 0 auto;
+
+        & img{
+            display: block;
+            min-width: 80px;
+            max-width: 90px;
+            padding: 5px 20px;
+            margin: 5px;
+        }
+    }
 }
 
+.footer-widget{
+    margin: 30px 0 0 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: $background_color1;
 
+    & div.row{
+        margin: auto;
+
+        & div{
+
+            & hr{
+                height: 1px;
+                color: $button_link_hover_color;
+                max-width: 50%;
+
+            }
+
+            & h5{
+                font: $h5_font;
+                font-size: 18px;
+                font-weight: 700;
+                color: $button_link_hover_color;
+            }
+    
+            & ul li a, a{
+                font: $p_font_size;
+                color: $button_link_hover_color;
+
+            }
+        }
+    }
+}
+
+div.container.marketing{
+    color: $light_dark_color;
+    padding: 20px 10%;
+    min-width:100%;
+
+    & h2{
+        text-align:left;
+        font: $h2_font;
+        font-size: 36px;
+        color: $light_dark_color;
+
+    }
+
+    & .row{
+        text-align: center;
+        max-width: 98%;
+        margin: 20px auto;
+        color: $light_dark_color;
+
+        & div.col-lg-4{
+            text-align: center;
+            margin: 5px auto;
+            color: $light_dark_color;
+
+            & div.buttons{
+                @include buttons();
+                box-shadow: none;
+            }
+
+            & h2{
+                text-align:center;
+                font: $pserif_font_size;
+                font-weight: 600;
+                font-size: 26px;
+                color: $light_dark_color;
+
+            }
+
+            & p{
+                text-align:center;
+                font:$p_font_size;
+                font-size: 18px;
+                color: $light_dark_color;
+
+            }
+
+            & div.rounded-circle{
+                width:140px; 
+                height:140px;
+                border: $background_color3 solid 8px;
+                box-shadow: $box-shadow;
+                border-radius: 140px;
+                overflow: hidden;
+                margin: 5px auto;
+
+                & img{
+                    width:145px; 
+                    height:145px;
+                    margin: -5px 0 0 -5px;
+                }
+            }
+        }
+    }
+
+
+
+
+}
 
 footer{
     background-color: $background_color1;
@@ -673,27 +978,79 @@ footer{
 
 @media only screen and (min-width: 680px){
 
-    div.hero{
-        @include flex(row, space-between, center);
+    
+    main{
         background-image: url('/fullsuite/images/hero.jpg'); /* fallback for older browsers */
         background-image: $hero_overlay, url('/fullsuite/images/hero.jpg');
         min-width: 100%;
         margin: 0 auto;
         background-size: cover;
+        z-index: 0;
+        margin: -100px auto 0 auto;
 
-        & img.block-top-image{
-            display: none;
+        div.carousel-indicators{
+            margin: auto;
         }
-    
-        & div.block-text-container{
-            
-            & div.block-buttons{
-                min-width: 100%;
-                margin: 0 auto;
+        
+        div.carousel-inner {
+
+
+            div.carousel-item{
+
+                div.hero{
+                    @include flex(row, space-between, center);
+                    min-width: 100%;
+                    margin: 0 auto;
+
+                    & img.block-top-image{
+                        display: none;
+                    }
+                
+                    & div.block-text-container{
+
+                        & div.block-buttons{
+                            min-width: 100%;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+
             }
         }
     }
 
+    div.about-block{
+        @include flex();
+    
+        & div.about-block-text-container{
+            max-width: 90%;
+            padding: 5%;
+    
+            & div.about-block-text{
+                min-width: 100%;
+                margin: 0 auto; 
+                text-align: left;
+    
+                & div.h11{
+                    max-width: 100%;
+                    margin: 0;
+                    text-align: left;
+    
+                }
+                
+                & div.h13{
+                    max-width: 100%;
+                    text-align: left;
+
+                    & div.block-image-container{
+                        float: left;
+                        margin: 5px 80px 80px 0;    
+                    }
+    
+                }
+            }  
+        }
+    }
 }
 
 //---------------------------------------------------------------
@@ -709,43 +1066,53 @@ footer{
 
     nav.desktop-nav{
         @include flex(row, space-between, center);
+        position: absolute;
         background: rgba(104, 146, 109, 0);
+        top: 0;
+        left: 0;
+        z-index: 1000;
         min-width: 100%;
         max-height: 80px;
-        margin:0;
+        margin:  0;
         padding:5px 0 0 0;
 
         & a.brand-link{
             display: block;
             max-width: 9%;
             padding: 3px 0.5%;
-            margin:0;
+            margin:0 0 0 4%;
 
             & img.logo{
-                margin:25px 0 0 25px;
-                width: 250px;
+                margin: -10px 0 0 45px;
+                max-width: 180px;
                 height: auto;
             }
         }
 
         & ul.nav-desktop-items{
-            @include flex(row, space-between center);
-            background: rgba(104, 146, 109, 0);
-            max-width: 50%;
-            padding: 0 0 0 40%;
-            margin-right: 0;
+            @include flex(row, space-between, center);
+            background: $nobackground;
+            min-width: none;
+            max-width: 60%;
+            margin: -50px 0 0 15px;
+            padding:0;
             
             & li.nav-item{
-                background: rgba(104, 146, 109, 0);
-                max-height:0;
+                background: $nobackground;
+                max-height:20px;
+                width: 18%;
+                padding: 0 3px;
+                display:inline-block;
 
 
                 & a.nav-link{
+                    display:inline-block;
                     color:$light_color;
                     font: $p_font_size;
                     font-size: 16px;
+                    min-width: 100px;
                     font-weight: 900;
-
+                    padding: 0 5px 0 0;
                 }
 
                 & a.nav-link:hover{
@@ -771,6 +1138,10 @@ div.content{
         max-width: 80%;
         margin: 0 auto;
         padding: 0;
+
+        & form{
+            max-width: 46%;
+        }
     
         & div.block-image-container{
             width: 350px;
@@ -822,11 +1193,14 @@ div.content{
         
                 & div.h11{
                     text-align: left;
+                    max-width: 80%;
+                    margin: 10px auto 10px 0;
+
                 }
                 
                 & div.h13{
                     text-align: left;
-                    margin: 0 0 10px 0;   
+                    margin: 15px 0 10px 0;   
                 }
     
                 & div.dark{
@@ -839,18 +1213,18 @@ div.content{
                 min-width: 100%;
                 max-width: 100%;                    
 
-                & a.buttons{
+                & .buttons{
                     margin: 0;
                 }
     
-                & a.buttons-2{
+                & .buttons-2{
                     margin: 0 15px 0 0;
                 }
         
-                & a.solid-button:hover{
+                & .solid-button:hover{
                     background-color:$button_link_hover_color;
                     border: 2px solid $button_link_hover_color; 
-                    color: $light-dark_color;
+                    color: $light_dark_color;
                 }
         
                 & a.border-button{
@@ -862,23 +1236,49 @@ div.content{
                 }
             }
         }
-    
     }
 
-    div.blue-block{
-        @include flex(row, space-between, flex-start);
-        max-width: 98%;
+    & div.about-block{
+        @include flex();
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 5%;
 
-        & div.contact-info{
-            min-width: 22%;
-        }
+        & div.about-block-text-container{
+            max-width: 100%;
+    
+            & div.about-block-text{
+                min-width: 100%;
+                margin: 0; 
+                text-align: left;
+    
+                & div.h11{
+                    max-width: 100%;
+                    margin: 0;
+                    text-align: left;
+    
+                }
+                
+                & div.h13{
+                    max-width: 100%;
+                    text-align: left;
 
-        & form{
-            min-width: 22%;
-            margin-top: 0;
-            & input, textarea{
-                min-width: 96%;
-            }
+                    & div.block-image-container{
+                        float: left;
+                        margin: -15px 30px 50px 5px;   
+                    }
+                }
+
+                & div.h132{
+                    text-align: left;
+                    & div.block-image-container{
+                        float: right;
+                        margin: -15px 5px 50px 30px;   
+
+                    }
+
+                }
+            }  
         }
     }
 
@@ -924,15 +1324,28 @@ div.content{
         }
     }
     div.blue-block{
+        @include flex(row, space-between, flex-start);
         min-width: 80%;
         padding: 25px 5%;
+
+        & div.contact-info{
+            min-width: 22%;
+        }
+
+        & form{
+            min-width: 22%;
+            margin-top: 0;
+            & input, textarea{
+                min-width: 96%;
+            }
+        }
 
         & div.headings{
             max-width: 10%;
         }
 
         & div.card-container{
-            @include flex(row, center, center);
+            @include flex(row, space-between center);
             min-width: 65%;
             max-width: 70%;
             margin:auto;
@@ -945,7 +1358,7 @@ div.content{
                 padding: 10px 15px 5px 15px;
                 min-width: 250px;
                 min-height: 350px;
-                box-shadow: 0 0 10px 0 $light-dark_color;
+                box-shadow: 0 0 10px 0 $light_dark_color;
         
                 & p{
                     font:$p_font_size;
@@ -966,62 +1379,139 @@ div.content{
             }
     
             & div.card-content:hover{
-                box-shadow: 0 0 30px 0 $light-dark_color;
+                box-shadow: 0 0 30px 0 $light_dark_color;
             }
     
         }
     }
-}
 
+    div.block-margin{
 
-div.hero{
-    min-height: 350px;
-    background-color: $background_color1;
-    min-width: 100%;
-    margin: -170px auto 0 auto;
-    z-index:50;
+        padding-top: 50px;
+        padding-bottom: 30px;
 
-    & div.hero-block-text-container{
+    }
 
-        & div.hero-text{
-            max-width: 450px;
-            margin: 0 auto; 
+    & .partners-block{
+        height: 80px;
+    }
 
-            & div.h11{
-                font: $h1_font;
-                font-size: 40px; 
-                text-align: left;
+    & div.blue-strap{
+
+        
+        & div.blue-block{
+            @include flex(row, space-between, center);
+            background-color: $background_color1;
+            min-width: 98%;
+            width: 100%;
+            margin-bottom: 0;
+            padding: 2% 0;
+
+            & div.card-container{
+                @include flex(row, space-between, center);
+                min-width: 100%;
+                margin: 0;
+                padding: 2% 0;
+
+                & div.card-content{
+                    margin: 0;
+                    padding: 2% 0;
+
+                    & div.card-item-container{
+                        padding:0 10%;
+                    }
+                }
+
             }
-            
-            & div.h12{
-                font: $h1_font;
-                font-size: 40px; 
-                line-height: 550px;
-                text-align: left;
-
-            }
-            
-            & div.h13{
-                font: $p_font_size;
-                font-size: 40px; 
-                text-align: left;
-
-            }
-        }  
-
-        & div.block-buttons{
-            justify-content: left;
-
         }
     }
-
-    & img.block-top-image{   
-        display: inline-block;   
-        width:500px;
-        margin-top: 150px;
-        padding-top: 40px;
-        margin-right: -50px;
-    }
 }
+
+main{
+    z-index: 0;
+    margin: 0 auto 20px auto;
+    
+    & div.carousel-inner {
+
+
+        div.carousel-item{
+
+
+            div.hero{
+                min-height: 350px;
+                background-color: $nobackground;
+                min-width: 100%;
+                padding-left: 4%;
+                padding-right: 50px;
+                z-index:0;
+            
+                & div.hero-block-text-container{
+                    margin-left: 55px;
+                    margin-right: 50px;
+                    width: 100%;
+            
+                    & div.hero-text{
+                        max-width: 450px;
+                        margin: 0 auto; 
+            
+                        & div.h11{
+                            margin-top: 50px;
+                            font: $h1_font;
+                            text-align: left;
+                            max-width: 80%;
+                            margin: 10px auto 10px 0;
+
+                        }
+                        
+                        & div.h12{
+                            font: $h1_font;
+                            font-size: 40px; 
+                            line-height: 550px;
+                            text-align: left;
+            
+                        }
+                        
+                        & div.h13{
+                            font: $p_font_size;
+                            font-size: 40px; 
+                            text-align: left;
+                            margin: 15px 0 10px 0;   
+
+                        }
+                    }  
+            
+                    & div.block-buttons{
+                        justify-content: left;
+            
+                    }
+                }
+            
+                & img.block-top-image{   
+                    display: inline-block;   
+                    width:300px;
+                    max-width: 300px;
+                    margin-top: 150px;
+                    padding-top: 40px;
+                }
+
+                & img.img2{
+                    width:300px;
+                    max-width: 300px;
+                    padding-right: 100px;
+
+                }
+            }
+        
+        }
+    }
+} 
+
+
+.footer-widget{
+    justify-content: space-between ;
+    align-items: flex-end;
+
+}
+
 
 }

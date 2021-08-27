@@ -21,7 +21,7 @@ $pageShortSummary="";
 
             ?>
             
-            <div class="hero block">
+            <div class="hero other-hero block">
                 <div class="block-text-container hero-block-text-container">
                     <div class="block-text">
                         <div class="h11 about">Our Solutions</div>
@@ -37,7 +37,7 @@ $pageShortSummary="";
                             <div class="h13 dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
                         </div>
                         <div class="block-buttons">
-                            <a href='#' class="buttons solid-button">Our Services</a>
+                            <a href='#' class="buttons solid-button">Our Solutions</a>
                         </div>
                     </div>
                     <div class='block-image-container'>

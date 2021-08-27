@@ -21,7 +21,7 @@ $pageShortSummary="";
 
             ?>
             
-            <div class="hero block">
+            <div class="hero other-hero block">
                 <div class="block-text-container hero-block-text-container">
                     <div class="block-text">
                         <div class="h11 about">Contact Us</div>
@@ -30,22 +30,36 @@ $pageShortSummary="";
             </div>
 
             <div class="content">
+
                 <div class="block">
-                    <div class="block-text-container">
-                        <div class="block-text">
-                            <div class="h11 dark">Title Text </div>
-                            <div class="h13 dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+   
+                    <form class="row">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full name</label>
+                            <input type="text" name="name" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="message" class="form-control" id="message" rows="6" required></textarea>
                         </div>
                         <div class="block-buttons">
-                            <a href='#' class="buttons solid-button">Our Services</a>
+                            <input type='submit' class="buttons solid-button" value="Submit" />
+                        </div>
+                    </form>
+                    <div class="block-text-container">
+                        <div class="block-text">
+                            <div class="h11 dark border-bottom">Get in Touch </div>
+                            <div class="h13 dark"> <i class="bi bi-envelope-fill"></i> &nbsp; info@fullsuitetellecoms.com </div>
+                            <div class="h13 dark"> <i class="bi bi-telephone-fill"></i> &nbsp; 078 512 5653 </div>
+
+
                         </div>
                     </div>
-                    <div class='block-image-container'>
-                        <div class='block-imgback-shape shape1'>&nbsp;</div>
-                        <img class='block-top-image' src='/fullsuite/images/phone.jpg' alt='hero image' />
-                    </div>
                 </div>
-            </div>
 
             <?php 
                 

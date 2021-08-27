@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Open+Sans:wght@300&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&family=Teko:wght@500&display=swap");
 body {
   color: #31393c;
   min-width: 100%;
@@ -9,6 +9,8 @@ body {
   overflow-x: hidden;
   min-width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 a {
@@ -47,7 +49,7 @@ nav ul {
   line-height: 40px;
   width: 100%;
   max-width: 100%;
-  margin: 30px auto 20px auto;
+  margin: 60px auto 40px auto;
   padding: 0;
   background-color: #ffffff;
 }
@@ -61,7 +63,7 @@ nav ul li {
 nav ul li a {
   display: block;
   color: #ffffff;
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 900;
   line-height: 40px;
@@ -119,20 +121,20 @@ nav.mobile div.brand-link-container a.brand-link img.navlogo {
 
 nav.mobile div.fa-bars-container {
   width: 45%;
-  padding-right: 5%;
+  padding-right: 0;
   text-align: right;
 }
 
 nav.mobile div.fa-bars-container i.fa {
   text-align: right;
   font-size: 30px;
-  color: #39A8FE;
+  color: #2D86CB;
   line-height: 105px;
   cursor: pointer;
 }
 
 nav.mobile div.fa-bars-container i.fa:hover {
-  color: #2D86CB;
+  color: #39A8FE;
 }
 
 nav.nav-hamburger-navigation {
@@ -253,6 +255,30 @@ div.block {
   margin: 20px 0 10px 0;
 }
 
+div.block form {
+  margin: 60px auto;
+  padding: 5px;
+  border-radius: 3px;
+  border: #e7e7e9 solid 1px;
+  max-width: 95%;
+}
+
+div.block .buttons {
+  color: #ffffff;
+  background-color: #f36523;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  font: 400 16px "Montserrat", sans-serif;
+  padding: 8px 15px 10px 15px;
+  -webkit-box-shadow: 1px 2px 8px 1px #31393c;
+          box-shadow: 1px 2px 8px 1px #31393c;
+}
+
+div.block .buttons:hover {
+  background-color: #e7e7e9;
+  color: #31393c;
+}
+
 div.block div.block-image-container {
   width: 200px;
   height: 200px;
@@ -310,20 +336,23 @@ div.block div.block-text-container div.block-text {
 }
 
 div.block div.block-text-container div.block-text div.h11 {
-  font: 700 35px "Russo One", sans-serif;
+  font: 700 60px "Teko", sans-serif;
   font-size: 40px;
   text-align: center;
   color: #ffffff;
   text-shadow: #31393c 0 1px 20px;
+  min-width: 200px;
+  max-width: 80%;
+  margin: 10px auto;
 }
 
 div.block div.block-text-container div.block-text div.h13 {
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   font-size: 30px;
   text-align: center;
   color: #ffffff;
   text-shadow: #31393c 0 1px 20px;
-  margin: 0 0 10px 0;
+  margin: 15px 0 10px 0;
 }
 
 div.block div.block-text-container div.block-text div.dark {
@@ -350,24 +379,25 @@ div.block div.block-text-container div.block-buttons {
   margin: 0 auto;
 }
 
-div.block div.block-text-container div.block-buttons a.buttons {
+div.block div.block-text-container div.block-buttons .buttons {
   color: #ffffff;
   background-color: #f36523;
   border: none;
   border-radius: 5px 5px 5px 5px;
-  font: 400 16px "open sans", sans-serif;
+  font: 400 16px "Montserrat", sans-serif;
   padding: 8px 15px 10px 15px;
   -webkit-box-shadow: 1px 2px 8px 1px #31393c;
           box-shadow: 1px 2px 8px 1px #31393c;
   margin: 0 auto;
   border: 2px solid #f36523;
+  text-decoration: none;
 }
 
-div.block div.block-text-container div.block-buttons a.buttons-2 {
+div.block div.block-text-container div.block-buttons .buttons-2 {
   margin: 0 15px 0 0;
 }
 
-div.block div.block-text-container div.block-buttons a.solid-button:hover {
+div.block div.block-text-container div.block-buttons .solid-button:hover {
   background-color: #e7e7e9;
   border: 2px solid #e7e7e9;
   color: #31393c;
@@ -381,7 +411,55 @@ div.block div.block-text-container div.block-buttons a.border-button:hover {
   border: 2px solid #e7e7e9;
 }
 
-div.hero {
+div.about-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+div.about-block div.about-block-text-container {
+  max-width: 90%;
+  padding: 5%;
+}
+
+div.about-block div.about-block-text-container div.about-block-text {
+  min-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+div.about-block div.about-block-text-container div.about-block-text div.h11 {
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+div.about-block div.about-block-text-container div.about-block-text div.h13 {
+  max-width: 100%;
+  text-align: left;
+}
+
+div.other-hero {
+  background-image: url("/fullsuite/images/hero.jpg");
+  /* fallback for older browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 136, 205, 0.453)), to(rgba(45, 136, 205, 0.453))), url("/fullsuite/images/hero.jpg");
+  background-image: linear-gradient(to bottom, rgba(45, 136, 205, 0.453) 0%, rgba(45, 136, 205, 0.453) 100%), url("/fullsuite/images/hero.jpg");
+  background-attachment: scroll;
+  min-width: 100%;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,21 +473,67 @@ div.hero {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+div.other-hero div.block-text-container {
+  padding: 250px 0 50px 0;
+}
+
+div.other-hero img {
+  display: none;
+}
+
+div.other-hero div.block-buttons a {
+  text-decoration: none;
+}
+
+main {
   background-image: url("/fullsuite/images/hero.jpg");
   /* fallback for older browsers */
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 136, 205, 0.453)), to(rgba(45, 136, 205, 0.453))), url("/fullsuite/images/hero.jpg");
   background-image: linear-gradient(to bottom, rgba(45, 136, 205, 0.453) 0%, rgba(45, 136, 205, 0.453) 100%), url("/fullsuite/images/hero.jpg");
+  background-attachment: scroll;
   min-width: 100%;
   margin: 0 auto;
   background-size: cover;
+  background-position: center center;
+  background-repeat: none;
 }
 
-div.hero div.block-text-container {
+main div.carousel-indicators {
+  margin: auto;
+}
+
+main div.carousel-inner div.carousel-item div.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+main div.carousel-inner div.carousel-item div.hero div.block-text-container {
   padding: 250px 0 50px 0;
 }
 
-div.hero img {
+main div.carousel-inner div.carousel-item div.hero img {
   display: none;
+}
+
+main div.carousel-inner div.carousel-item div.hero div.block-buttons a {
+  text-decoration: none;
 }
 
 div.content {
@@ -422,7 +546,7 @@ div.content div.hero-bottom {
   line-height: 40px;
   width: 100%;
   max-width: 100%;
-  margin: 30px auto 20px auto;
+  margin: 60px auto 40px auto;
   padding: 0;
   background-color: #ffffff;
   text-align: center;
@@ -430,7 +554,7 @@ div.content div.hero-bottom {
 
 div.content div.hero-bottom span.h14 {
   min-width: 100%;
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #ffffff;
   text-align: center;
 }
@@ -440,7 +564,7 @@ div.content div.headings {
   line-height: 40px;
   width: 100%;
   max-width: 100%;
-  margin: 30px auto 20px auto;
+  margin: 60px auto 40px auto;
   padding: 0;
   background-color: #ffffff;
   text-align: center;
@@ -448,7 +572,7 @@ div.content div.headings {
 
 div.content div.headings span {
   min-width: 100%;
-  font: 500 22px "open sans", sans-serif;
+  font: 500 22px "Montserrat", sans-serif;
   font-weight: 700;
   color: #31393c;
   text-align: center;
@@ -470,7 +594,7 @@ div.content div.headings, div.content div.blues {
   line-height: 40px;
   width: 100%;
   max-width: 100%;
-  margin: 30px auto 20px auto;
+  margin: 60px auto 40px auto;
   padding: 0;
   background-color: #39A8FE;
 }
@@ -484,7 +608,7 @@ div.content div.headings span.blue-span, div.content div.blues span.blue-span {
 div.content div.headings p.blue-p, div.content div.blues p.blue-p {
   color: #ffffff;
   margin: 2px 2px 0 2px;
-  font: 500 14px "open sans", sans-serif;
+  font: 500 14px "Montserrat", sans-serif;
 }
 
 div.content div.blues2 {
@@ -504,7 +628,7 @@ div.content div.inner-content {
 
 div.content div.inner-content h3.inner-title {
   width: 100%;
-  font: 400 25px "Russo One", sans-serif;
+  font: 400 25px "Teko", sans-serif;
   font-size: 18px;
   font-weight: 900;
   color: #39A8FE;
@@ -515,7 +639,7 @@ div.content div.inner-content h3.inner-title {
 div.content div.inner-content p.inner-p {
   color: #31393c;
   text-align: center;
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   text-shadow: 1px 1px 2px #ffffff;
   font-weight: 600;
   max-width: 80%;
@@ -550,7 +674,7 @@ div.content div.headings {
   line-height: 40px;
   width: 100%;
   max-width: 100%;
-  margin: 30px auto 20px auto;
+  margin: 60px auto 40px auto;
   padding: 0;
   background-color: #ffffff;
   text-align: center;
@@ -558,7 +682,7 @@ div.content div.headings {
 
 div.content div.headings span {
   min-width: 100%;
-  font: 500 22px "open sans", sans-serif;
+  font: 500 22px "Montserrat", sans-serif;
   font-weight: 700;
   color: #31393c;
   text-align: center;
@@ -571,13 +695,133 @@ div.content div.headings.blues {
   line-height: 40px;
   width: 100%;
   max-width: 100%;
-  margin: 30px auto 20px auto;
+  margin: 60px auto 40px auto;
   padding: 0;
   background-color: #2876B2;
 }
 
 div.content div.headings.blues span {
   color: #ffffff;
+}
+
+div.content div.blue-strap {
+  min-width: 100%;
+  margin: 0 0 20px 0;
+  padding: 40px 10% 30px 10%;
+  background-color: #2876B2;
+}
+
+div.content div.blue-strap div.block-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-between center;
+      -ms-flex-pack: space-between center;
+          justify-content: space-between center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 50%;
+  margin: 5px 0;
+  padding: 5px 0 20px 0;
+}
+
+div.content div.blue-strap div.block-text-container div.block-text {
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+div.content div.blue-strap div.block-text-container div.block-text div.h11 {
+  text-align: left;
+  max-width: 80%;
+  margin: 10px auto;
+}
+
+div.content div.blue-strap div.block-text-container div.block-text div.h13 {
+  text-align: left;
+  margin: 15px 0 10px 0;
+}
+
+div.content div.blue-strap div.block-text-container div.block-text div.dark {
+  text-shadow: none;
+}
+
+div.content div.blue-strap div.block-text-container div.block-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+div.content div.blue-strap div.block-text-container div.block-buttons .buttons {
+  margin: 0;
+}
+
+div.content div.blue-strap div.block-text-container div.block-buttons .buttons-2 {
+  margin: 0 15px 0 0;
+}
+
+div.content div.blue-strap div.block-text-container div.block-buttons .solid-button:hover {
+  background-color: #e7e7e9;
+  border: 2px solid #e7e7e9;
+  color: #31393c;
+}
+
+div.content div.blue-strap div.block-text-container div.block-buttons a.border-button {
+  background-color: rgba(244, 102, 37, 0);
+}
+
+div.content div.blue-strap div.block-text-container div.block-buttons a.border-button:hover {
+  border: 2px solid #e7e7e9;
+}
+
+div.content div.blue-strap h2 {
+  font: 400 25px "Teko", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+div.content div.blue-strap h3 {
+  font: 500 14px "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+div.content div.blue-strap p {
+  font: 400 14px "Montserrat", sans-serif;
+  color: #ffffff;
+}
+
+div.content div.blue-strap div.icon-square {
+  border: none;
+  background-color: #2876B2;
+}
+
+div.content div.blue-strap div.icon-square i.bi {
+  background-color: #2876B2;
+  color: #ffffff;
+  border: none;
+}
+
+div.content div.blue-strap p.largep {
+  font-size: 25px;
 }
 
 div.content div.blue-block {
@@ -614,8 +858,8 @@ div.content div.blue-block div.card-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
-  max-width: 450px;
+  width: 100%;
+  max-width: 300px;
   margin: auto;
 }
 
@@ -636,23 +880,26 @@ div.content div.blue-block div.card-container div.card-content {
   background-color: #ffffff;
   border-radius: 5px;
   margin: 0 5px 20px 5px;
-  padding: 10px 5% 5px 5%;
-  min-width: 80%;
+  padding: 10% auto 5px 10%;
+  width: 80%;
   min-height: 350px;
+  max-width: 300px;
   -webkit-box-shadow: 0 0 10px 0 #31393c;
           box-shadow: 0 0 10px 0 #31393c;
 }
 
-div.content div.blue-block div.card-container div.card-content i.fa {
+div.content div.blue-block div.card-container div.card-content i.bi {
   font-size: 60px;
-  color: #436383;
+  color: #2D86CB;
+  margin: 5px 0 10px;
 }
 
 div.content div.blue-block div.card-container div.card-content h5.card-title {
-  font: 400 14px "Crimson Text", serif;
+  font: 400 14px "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #436383;
+  color: #2D86CB;
+  text-align: center;
 }
 
 div.content div.blue-block div.card-container div.card-content div.card-item-container {
@@ -670,26 +917,27 @@ div.content div.blue-block div.card-container div.card-content div.card-item-con
       -ms-flex-align: start;
           align-items: flex-start;
   min-width: 90%;
-  margin: 5px 5px 5px 90px;
+  margin: 1px 5px 1px 50px;
 }
 
 div.content div.blue-block div.card-container div.card-content div.card-item-container p.card-item {
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   min-width: 100%;
   font-weight: 700;
   text-align: left;
   margin: 2px 0 2px 5px;
+  color: #000000;
 }
 
-div.content div.blue-block div.card-container div.card-content div.card-item-container i.fa {
-  font-size: 18px;
-  color: #436383;
+div.content div.blue-block div.card-container div.card-content div.card-item-container i.bi {
+  font-size: 8px;
+  color: #2D86CB;
   text-align: left;
 }
 
 div.content div.blue-block div.card-container div.card-content a {
-  font: 400 14px "open sans", sans-serif;
-  color: #2D86CB;
+  font: 400 14px "Montserrat", sans-serif;
+  color: #436383;
   text-decoration: underline;
   margin: 20px 0 10px 0;
   font-weight: 700;
@@ -728,7 +976,7 @@ div.content div.blue-block div.contact-info img {
 }
 
 div.content div.blue-block div.contact-info p.contact-details {
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #ffffff;
   max-width: 96%;
 }
@@ -756,7 +1004,7 @@ div.content div.blue-block form input, div.content div.blue-block form textarea 
   min-width: 98%;
   height: 30px;
   margin: 0 0 20px 0;
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #31393c;
 }
 
@@ -781,8 +1029,138 @@ div.content div.blue-block form input.send-button:hover {
 }
 
 div.content div.blue-block form label {
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #ffffff;
+}
+
+div.content .partners-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 90%;
+  height: 120px;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+div.content .partners-block img {
+  display: block;
+  min-width: 80px;
+  max-width: 90px;
+  padding: 5px 20px;
+  margin: 5px;
+}
+
+.footer-widget {
+  margin: 30px 0 0 0;
+  width: 100%;
+  padding: 20px 10%;
+  background-color: #2876B2;
+}
+
+.footer-widget div.row {
+  margin: auto;
+}
+
+.footer-widget div.row div hr {
+  height: 1px;
+  color: #e7e7e9;
+  max-width: 50%;
+}
+
+.footer-widget div.row div h5 {
+  font: 500 14px "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #e7e7e9;
+}
+
+.footer-widget div.row div ul li a, .footer-widget div.row div a {
+  font: 400 14px "Montserrat", sans-serif;
+  color: #e7e7e9;
+}
+
+div.container.marketing {
+  color: #31393c;
+  padding: 20px 10%;
+  min-width: 100%;
+}
+
+div.container.marketing h2 {
+  text-align: left;
+  font: 600 18px "Teko", sans-serif;
+  font-size: 36px;
+  color: #31393c;
+}
+
+div.container.marketing .row {
+  text-align: center;
+  max-width: 98%;
+  margin: 20px auto;
+  color: #31393c;
+}
+
+div.container.marketing .row div.col-lg-4 {
+  text-align: center;
+  margin: 5px auto;
+  color: #31393c;
+}
+
+div.container.marketing .row div.col-lg-4 div.buttons {
+  color: #ffffff;
+  background-color: #f36523;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  font: 400 16px "Montserrat", sans-serif;
+  padding: 8px 15px 10px 15px;
+  -webkit-box-shadow: 1px 2px 8px 1px #31393c;
+          box-shadow: 1px 2px 8px 1px #31393c;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+div.container.marketing .row div.col-lg-4 h2 {
+  text-align: center;
+  font: 400 14px "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #31393c;
+}
+
+div.container.marketing .row div.col-lg-4 p {
+  text-align: center;
+  font: 400 14px "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #31393c;
+}
+
+div.container.marketing .row div.col-lg-4 div.rounded-circle {
+  width: 140px;
+  height: 140px;
+  border: #f36523 solid 8px;
+  -webkit-box-shadow: 1px 2px 8px 1px #31393c;
+          box-shadow: 1px 2px 8px 1px #31393c;
+  border-radius: 140px;
+  overflow: hidden;
+  margin: 5px auto;
+}
+
+div.container.marketing .row div.col-lg-4 div.rounded-circle img {
+  width: 145px;
+  height: 145px;
+  margin: -5px 0 0 -5px;
 }
 
 footer {
@@ -793,7 +1171,7 @@ footer {
 }
 
 footer p.footer-text {
-  font: 400 14px "open sans", sans-serif;
+  font: 400 14px "Montserrat", sans-serif;
   color: #ffffff;
   line-height: 45px;
   text-align: center;
@@ -801,7 +1179,21 @@ footer p.footer-text {
 }
 
 @media only screen and (min-width: 680px) {
-  div.hero {
+  main {
+    background-image: url("/fullsuite/images/hero.jpg");
+    /* fallback for older browsers */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 136, 205, 0.453)), to(rgba(45, 136, 205, 0.453))), url("/fullsuite/images/hero.jpg");
+    background-image: linear-gradient(to bottom, rgba(45, 136, 205, 0.453) 0%, rgba(45, 136, 205, 0.453) 100%), url("/fullsuite/images/hero.jpg");
+    min-width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    z-index: 0;
+    margin: -100px auto 0 auto;
+  }
+  main div.carousel-indicators {
+    margin: auto;
+  }
+  main div.carousel-inner div.carousel-item div.hero {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -815,20 +1207,52 @@ footer p.footer-text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-image: url("/fullsuite/images/hero.jpg");
-    /* fallback for older browsers */
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(45, 136, 205, 0.453)), to(rgba(45, 136, 205, 0.453))), url("/fullsuite/images/hero.jpg");
-    background-image: linear-gradient(to bottom, rgba(45, 136, 205, 0.453) 0%, rgba(45, 136, 205, 0.453) 100%), url("/fullsuite/images/hero.jpg");
     min-width: 100%;
     margin: 0 auto;
-    background-size: cover;
   }
-  div.hero img.block-top-image {
+  main div.carousel-inner div.carousel-item div.hero img.block-top-image {
     display: none;
   }
-  div.hero div.block-text-container div.block-buttons {
+  main div.carousel-inner div.carousel-item div.hero div.block-text-container div.block-buttons {
     min-width: 100%;
     margin: 0 auto;
+  }
+  div.about-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  div.about-block div.about-block-text-container {
+    max-width: 90%;
+    padding: 5%;
+  }
+  div.about-block div.about-block-text-container div.about-block-text {
+    min-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  div.about-block div.about-block-text-container div.about-block-text div.h11 {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  div.about-block div.about-block-text-container div.about-block-text div.h13 {
+    max-width: 100%;
+    text-align: left;
+  }
+  div.about-block div.about-block-text-container div.about-block-text div.h13 div.block-image-container {
+    float: left;
+    margin: 5px 80px 80px 0;
   }
 }
 
@@ -850,7 +1274,11 @@ footer p.footer-text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: absolute;
     background: rgba(104, 146, 109, 0);
+    top: 0;
+    left: 0;
+    z-index: 1000;
     min-width: 100%;
     max-height: 80px;
     margin: 0;
@@ -860,11 +1288,11 @@ footer p.footer-text {
     display: block;
     max-width: 9%;
     padding: 3px 0.5%;
-    margin: 0;
+    margin: 0 0 0 4%;
   }
   nav.desktop-nav a.brand-link img.logo {
-    margin: 25px 0 0 25px;
-    width: 250px;
+    margin: -10px 0 0 45px;
+    max-width: 180px;
     height: auto;
   }
   nav.desktop-nav ul.nav-desktop-items {
@@ -875,26 +1303,33 @@ footer p.footer-text {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: space-between center;
-        -ms-flex-pack: space-between center;
-            justify-content: space-between center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    background: rgba(104, 146, 109, 0);
-    max-width: 50%;
-    padding: 0 0 0 40%;
-    margin-right: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #00000000;
+    min-width: none;
+    max-width: 60%;
+    margin: -50px 0 0 15px;
+    padding: 0;
   }
   nav.desktop-nav ul.nav-desktop-items li.nav-item {
-    background: rgba(104, 146, 109, 0);
-    max-height: 0;
+    background: #00000000;
+    max-height: 20px;
+    width: 18%;
+    padding: 0 3px;
+    display: inline-block;
   }
   nav.desktop-nav ul.nav-desktop-items li.nav-item a.nav-link {
+    display: inline-block;
     color: #ffffff;
-    font: 400 14px "open sans", sans-serif;
+    font: 400 14px "Montserrat", sans-serif;
     font-size: 16px;
+    min-width: 100px;
     font-weight: 900;
+    padding: 0 5px 0 0;
   }
   nav.desktop-nav ul.nav-desktop-items li.nav-item a.nav-link:hover {
     color: #39A8FE;
@@ -924,6 +1359,9 @@ footer p.footer-text {
     max-width: 80%;
     margin: 0 auto;
     padding: 0;
+  }
+  div.content div.block form {
+    max-width: 46%;
   }
   div.content div.block div.block-image-container {
     width: 350px;
@@ -980,10 +1418,12 @@ footer p.footer-text {
   }
   div.content div.block div.block-text-container div.block-text div.h11 {
     text-align: left;
+    max-width: 80%;
+    margin: 10px auto 10px 0;
   }
   div.content div.block div.block-text-container div.block-text div.h13 {
     text-align: left;
-    margin: 0 0 10px 0;
+    margin: 15px 0 10px 0;
   }
   div.content div.block div.block-text-container div.block-text div.dark {
     text-shadow: none;
@@ -1005,13 +1445,13 @@ footer p.footer-text {
     min-width: 100%;
     max-width: 100%;
   }
-  div.content div.block div.block-text-container div.block-buttons a.buttons {
+  div.content div.block div.block-text-container div.block-buttons .buttons {
     margin: 0;
   }
-  div.content div.block div.block-text-container div.block-buttons a.buttons-2 {
+  div.content div.block div.block-text-container div.block-buttons .buttons-2 {
     margin: 0 15px 0 0;
   }
-  div.content div.block div.block-text-container div.block-buttons a.solid-button:hover {
+  div.content div.block div.block-text-container div.block-buttons .solid-button:hover {
     background-color: #e7e7e9;
     border: 2px solid #e7e7e9;
     color: #31393c;
@@ -1022,7 +1462,7 @@ footer p.footer-text {
   div.content div.block div.block-text-container div.block-buttons a.border-button:hover {
     border: 2px solid #e7e7e9;
   }
-  div.content div.blue-block {
+  div.content div.about-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1030,23 +1470,43 @@ footer p.footer-text {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    max-width: 98%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 5%;
   }
-  div.content div.blue-block div.contact-info {
-    min-width: 22%;
+  div.content div.about-block div.about-block-text-container {
+    max-width: 100%;
   }
-  div.content div.blue-block form {
-    min-width: 22%;
-    margin-top: 0;
+  div.content div.about-block div.about-block-text-container div.about-block-text {
+    min-width: 100%;
+    margin: 0;
+    text-align: left;
   }
-  div.content div.blue-block form input, div.content div.blue-block form textarea {
-    min-width: 96%;
+  div.content div.about-block div.about-block-text-container div.about-block-text div.h11 {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  div.content div.about-block div.about-block-text-container div.about-block-text div.h13 {
+    max-width: 100%;
+    text-align: left;
+  }
+  div.content div.about-block div.about-block-text-container div.about-block-text div.h13 div.block-image-container {
+    float: left;
+    margin: -15px 30px 50px 5px;
+  }
+  div.content div.about-block div.about-block-text-container div.about-block-text div.h132 {
+    text-align: left;
+  }
+  div.content div.about-block div.about-block-text-container div.about-block-text div.h132 div.block-image-container {
+    float: right;
+    margin: -15px 5px 50px 30px;
   }
   div.content div.hero-bottom {
     background-color: #2D86CB;
@@ -1054,14 +1514,14 @@ footer p.footer-text {
     line-height: 40px;
     width: 100%;
     max-width: 100%;
-    margin: 30px auto 20px auto;
+    margin: 60px auto 40px auto;
     padding: 0;
     background-color: #ffffff;
     text-align: center;
   }
   div.content div.hero-bottom span.h14 {
     min-width: 100%;
-    font: 400 14px "open sans", sans-serif;
+    font: 400 14px "Montserrat", sans-serif;
     color: #ffffff;
     text-align: center;
   }
@@ -1085,8 +1545,31 @@ footer p.footer-text {
     text-align: left;
   }
   div.content div.blue-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     min-width: 80%;
     padding: 25px 5%;
+  }
+  div.content div.blue-block div.contact-info {
+    min-width: 22%;
+  }
+  div.content div.blue-block form {
+    min-width: 22%;
+    margin-top: 0;
+  }
+  div.content div.blue-block form input, div.content div.blue-block form textarea {
+    min-width: 96%;
   }
   div.content div.blue-block div.headings {
     max-width: 10%;
@@ -1099,12 +1582,12 @@ footer p.footer-text {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: space-between center;
+        -ms-flex-pack: space-between center;
+            justify-content: space-between center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     min-width: 65%;
     max-width: 70%;
     margin: auto;
@@ -1133,11 +1616,11 @@ footer p.footer-text {
             box-shadow: 0 0 10px 0 #31393c;
   }
   div.content div.blue-block div.card-container div.card-content p {
-    font: 400 14px "open sans", sans-serif;
+    font: 400 14px "Montserrat", sans-serif;
     margin: 2px 0;
   }
   div.content div.blue-block div.card-container div.card-content a {
-    font: 400 14px "open sans", sans-serif;
+    font: 400 14px "Montserrat", sans-serif;
     color: #2D86CB;
     text-decoration: underline;
     margin: 20px 0 10px 0;
@@ -1149,44 +1632,122 @@ footer p.footer-text {
     -webkit-box-shadow: 0 0 30px 0 #31393c;
             box-shadow: 0 0 30px 0 #31393c;
   }
-  div.hero {
-    min-height: 350px;
-    background-color: #2876B2;
-    min-width: 100%;
-    margin: -170px auto 0 auto;
-    z-index: 50;
+  div.content div.block-margin {
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
-  div.hero div.hero-block-text-container div.hero-text {
+  div.content .partners-block {
+    height: 80px;
+  }
+  div.content div.blue-strap div.blue-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #2876B2;
+    min-width: 98%;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 2% 0;
+  }
+  div.content div.blue-strap div.blue-block div.card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 100%;
+    margin: 0;
+    padding: 2% 0;
+  }
+  div.content div.blue-strap div.blue-block div.card-container div.card-content {
+    margin: 0;
+    padding: 2% 0;
+  }
+  div.content div.blue-strap div.blue-block div.card-container div.card-content div.card-item-container {
+    padding: 0 10%;
+  }
+  main {
+    z-index: 0;
+    margin: 0 auto 20px auto;
+  }
+  main div.carousel-inner div.carousel-item div.hero {
+    min-height: 350px;
+    background-color: #00000000;
+    min-width: 100%;
+    padding-left: 4%;
+    padding-right: 50px;
+    z-index: 0;
+  }
+  main div.carousel-inner div.carousel-item div.hero div.hero-block-text-container {
+    margin-left: 55px;
+    margin-right: 50px;
+    width: 100%;
+  }
+  main div.carousel-inner div.carousel-item div.hero div.hero-block-text-container div.hero-text {
     max-width: 450px;
     margin: 0 auto;
   }
-  div.hero div.hero-block-text-container div.hero-text div.h11 {
-    font: 700 35px "Russo One", sans-serif;
-    font-size: 40px;
+  main div.carousel-inner div.carousel-item div.hero div.hero-block-text-container div.hero-text div.h11 {
+    margin-top: 50px;
+    font: 700 60px "Teko", sans-serif;
     text-align: left;
+    max-width: 80%;
+    margin: 10px auto 10px 0;
   }
-  div.hero div.hero-block-text-container div.hero-text div.h12 {
-    font: 700 35px "Russo One", sans-serif;
+  main div.carousel-inner div.carousel-item div.hero div.hero-block-text-container div.hero-text div.h12 {
+    font: 700 60px "Teko", sans-serif;
     font-size: 40px;
     line-height: 550px;
     text-align: left;
   }
-  div.hero div.hero-block-text-container div.hero-text div.h13 {
-    font: 400 14px "open sans", sans-serif;
+  main div.carousel-inner div.carousel-item div.hero div.hero-block-text-container div.hero-text div.h13 {
+    font: 400 14px "Montserrat", sans-serif;
     font-size: 40px;
     text-align: left;
+    margin: 15px 0 10px 0;
   }
-  div.hero div.hero-block-text-container div.block-buttons {
+  main div.carousel-inner div.carousel-item div.hero div.hero-block-text-container div.block-buttons {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
   }
-  div.hero img.block-top-image {
+  main div.carousel-inner div.carousel-item div.hero img.block-top-image {
     display: inline-block;
-    width: 500px;
+    width: 300px;
+    max-width: 300px;
     margin-top: 150px;
     padding-top: 40px;
-    margin-right: -50px;
+  }
+  main div.carousel-inner div.carousel-item div.hero img.img2 {
+    width: 300px;
+    max-width: 300px;
+    padding-right: 100px;
+  }
+  .footer-widget {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 /*# sourceMappingURL=styles.css.map */
