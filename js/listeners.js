@@ -8,7 +8,6 @@ export const formListener = (formElements, responseDiv) => {
 
         const name = formElements[i].name; 
         const email = formElements[i].email; 
-        const subject = formElements[i].subject; 
         const message = formElements[i].message;
 
         // Set up a submit event listener for each marker in the array
@@ -18,7 +17,6 @@ export const formListener = (formElements, responseDiv) => {
             const data = {
                 'name': name,
                 'email': email,
-                'subject': subject,
                 'message': message
             }
 

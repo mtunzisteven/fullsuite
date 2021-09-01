@@ -1,11 +1,10 @@
 import{formListener, mobileMenuListener} from "./listeners.js";
-import{divSlider} from "./sliders.js";
 
 
 const forms = document.forms;
-const responseDiv = document.querySelector('#response-div');
+const responseText = document.querySelector('#responseText');
 
-formListener(forms, responseDiv);
+formListener(forms, responseText);
 
 const openMenu = document.querySelector('#openMenu');
 const closeMenu = document.querySelector('#closeMenu');

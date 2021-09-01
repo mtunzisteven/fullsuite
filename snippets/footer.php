@@ -1,46 +1,18 @@
-<div class="pt-4 border-top footer-widget">
-    <div class="row">
 
-    <div class="col-6 col-md">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-        </ul>
-      </div>
-      
-      <div class="col-6 col-md">
-        <h5>Features</h5>
-        <ul class="list-unstyled text-small">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool </a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random </a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team </a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff </a></li>
-        </ul>
-      </div>
+<div class="container footer-widget mw-100 px-5">
+  <div class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+    <p class="col-md-4 mb-0 text-light">&copy; 2021 Company, Inc</p>
 
-      <div class="col-6 col-md">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource </a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another </a></li>
-          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final </a></li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md">
-        <h5>Socialize with us.</h5>
-        <hr/>
-        <div class="row ">
-            <a class="col-1"><i class="bi bi-facebook"></i></a>
-            <a class="col-2"><i class="bi bi-instagram"></i></a>
-        </div>
-      </div>
-    </div>
+    <ul class="nav col-5 justify-content-sm-start justify-content-md-end">
+      <li class="nav-item"><a href="/fullsuite/" class="nav-link px-2 text-light">Home</a></li>
+      <li class="nav-item"><a href="/fullsuite/about/" class="nav-link px-2 text-light">About</a></li>
+      <li class="nav-item"><a href="/fullsuite/solutions/" class="nav-link px-2 text-light">Solutions</a></li>
+      <li class="nav-item"><a href="/fullsuite/our-team/" class="nav-link px-2 text-light">Our Team</a></li>
+      <li class="nav-item"><a href="/fullsuite/contact-us/" class="nav-link px-2 text-light">Contact Us</a></li>
+    </ul>
+  </div>
 </div>
+
 
 <footer>
     <p class='footer-text'>Copyright © 2021 Full Suite Telecoms (Pty) Ltd. All rights reserved</p>

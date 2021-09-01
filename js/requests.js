@@ -4,6 +4,7 @@ export const request = (data, responseDiv) => {
     fetch("/fullsuite/index.php",
         {
             method:"POST",
+            action: "email",
             body: data
         }
     )

@@ -824,6 +824,43 @@ div.content div.blue-strap p.largep {
   font-size: 25px;
 }
 
+div.content .solutions-blue-strap {
+  min-width: 100%;
+  margin: 0 0 20px 0;
+  padding: 40px 10% 30px 10%;
+  background-color: #2876B2;
+  background-color: #ffffff;
+}
+
+div.content .solutions-blue-strap h2 {
+  font: 400 25px "Teko", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #31393c;
+}
+
+div.content .solutions-blue-strap .solutions-text {
+  font: 400 14px "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #31393c;
+  margin-top: -20px;
+}
+
+div.content .solutions-blue-strap .solutions-text img {
+  width: 200px;
+  height: 200px;
+  margin-top: -20px;
+}
+
+div.content .solutions-blue-strap .solutions-text img.left {
+  float: left;
+  margin-right: 20px;
+}
+
+div.content .solutions-blue-strap .solutions-text i.bi {
+  color: #2876B2;
+}
+
 div.content div.blue-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1065,8 +1102,9 @@ div.content .partners-block img {
 
 .footer-widget {
   margin: 30px 0 0 0;
-  width: 100%;
-  padding: 20px 10%;
+  min-width: 90%;
+  max-width: 100%;
+  padding: 20px 5%;
   background-color: #2876B2;
 }
 
@@ -1684,6 +1722,24 @@ footer p.footer-text {
   div.content div.blue-strap div.blue-block div.card-container div.card-content div.card-item-container {
     padding: 0 10%;
   }
+  div.content .solutions-blue-strap {
+    background-color: #ffffff;
+  }
+  div.content .solutions-blue-strap h2 {
+    color: #31393c;
+  }
+  div.content .solutions-blue-strap div.solutions-text-div {
+    min-width: 100%;
+  }
+  div.content .solutions-blue-strap div.solutions-text-div .solutions-text {
+    font: 400 14px "Montserrat", sans-serif;
+    font-size: 18px;
+    color: #31393c;
+  }
+  div.content .solutions-blue-strap div.solutions-text-div .solutions-text img {
+    width: 200px;
+    height: 200px;
+  }
   main {
     z-index: 0;
     margin: 0 auto 20px auto;
@@ -1742,12 +1798,7 @@ footer p.footer-text {
     padding-right: 100px;
   }
   .footer-widget {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    min-width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

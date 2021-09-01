@@ -29,7 +29,7 @@ $pageShortSummary="";
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
                 </div>
                 <div class="carousel-inner"> 
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-bs-interval="10000">
                         <div class="container hero block">
                             <div class="block-text-container hero-block-text-container">
                                 <div class="block-text hero-text">
@@ -37,13 +37,13 @@ $pageShortSummary="";
                                     <div class="h13 heroh11">A comprehensive suite of telecommunication solutions.</div>
                                 </div>
                                 <div class="block-buttons">
-                                    <a href='#' class="buttons solid-button buttons-2">Learn more </a>
+                                    <a href='/fullsuite/about/' class="buttons solid-button buttons-2">Learn more </a>
                                 </div>
                             </div>
                             <img class='block-top-image' src='/fullsuite/images/switchboard.png' alt='hero image' />
                         </div>
                     </div>
-                    <div class="carousel-item active" >
+                    <div class="carousel-item active" data-bs-interval="10000">
                         <div class="container hero block">
                             <div class="block-text-container hero-block-text-container">
                                 <div class="block-text hero-text">
@@ -51,8 +51,8 @@ $pageShortSummary="";
                                     <div class="h13 heroh11">Seamless, fully intergrated telecommunications technology partner</div>
                                 </div>
                                 <div class="block-buttons">
-                                    <a href='#' class="buttons solid-button buttons-2">About Us </a>
-                                    <a href='#' class="buttons border-button buttons-2">Contact Us</a>
+                                    <a href='/fullsuite/about/' class="buttons solid-button buttons-2">About Us </a>
+                                    <a href='/fullsuite/contact-us/' class="buttons border-button buttons-2">Contact Us</a>
                                 </div>
                             </div>
                             <img class='block-top-image img2' src='/fullsuite/images/handheld.png' alt='hero image' />
@@ -89,12 +89,12 @@ $pageShortSummary="";
                             <div class="card-content">
                                 <i class="bi bi-telephone-fill"></i>
 
-                                <h5 class="card-title">Tailor Made PBX/PABX Systems</h5>
+                                <h5 class="card-title">PBX/PABX Switchboard Systems</h5>
                                 <div class='card-item-container'><i class="bi bi-play"></i><p class="card-item"> Multiple lines</p ></div>
                                 <div class='card-item-container'><i class="bi bi-play"></i><p class="card-item"> Multiple extensions</p ></div>
                                 <div class='card-item-container'><i class="bi bi-play"></i><p class="card-item"> Management system</p ></div>
 
-                                <a href='#' class="card-link">Learn More</a >
+                                <a href='/fullsuite/solutions/' class="card-link">Learn More</a >
                             </div >
 
                             <div class="card-content">
@@ -105,7 +105,7 @@ $pageShortSummary="";
                                 <div class='card-item-container'><i class="bi bi-play"></i><p class="card-item"> Local area network</p ></div>
                                 <div class='card-item-container'><i class="bi bi-play"></i><p class="card-item"> Wifi Solution</p ></div>
 
-                                <a href='#' class="card-link">Learn More</a >
+                                <a href='/fullsuite/solutions/' class="card-link">Learn More</a >
                             </div >
 
                             <div class="card-content">
@@ -116,7 +116,7 @@ $pageShortSummary="";
                                 <div class='card-item-container'><i class="bi bi-play"></i><p class="card-item"> Keep your number</p ></div>
                                 <div class='card-item-container'><i class="bi bi-play"></i><p class="card-item"> Free minutes</p ></div>
     
-                                <a href='#' class="card-link">Learn More</a >
+                                <a href='/fullsuite/solutions/' class="card-link">Learn More</a >
                             </div >
                         </div>
                     </div >
@@ -174,19 +174,38 @@ $pageShortSummary="";
                 <div class='headings'>
                     <span class="partners">OUR PARTNERS</span>
                 </div>
-                <div class="partners-block light-block block-margin">
-                    
-                
-                    <img src="/fullsuite/images/hugetelecom.jpg" alt="Huge Telecom logo" />
-                    <img src="/fullsuite/images/telkom.png" alt="telkom logo" />
-                    <img src="/fullsuite/images/ecn.png" alt="ecn logo" />
-                    <img src="/fullsuite/images/nec.png" alt="nec logo" />
-                    <img src="/fullsuite/images/yealink.png" alt="yealink logo" />
-                    <img src="/fullsuite/images/huawei.png" alt="huawei logo" />
-                    <img src="/fullsuite/images/panasonics.png" alt="panasonic logo" />
+                <div class="container justify-content-center mw-90 p-0">
+                    <div class="d-flex flex-wrap justify-content-center align-items-center">
 
-
+                        <div class="col p-2">
+                            <img width="100" length="auto" src="/fullsuite/images/hugetelecom.jpg" alt="Huge Telecom logo" />
+                        </div>
                 
+                        <div class="col p-2">
+                            <img width="100" length="auto" src="/fullsuite/images/telkom.png" alt="telkom logo" />
+                        </div>
+                        
+                        <div class="col p-2">
+                            <img width="100" length="auto" src="/fullsuite/images/ecn.png" alt="ecn logo" />
+                        </div>
+
+                        <div class="col p-2">
+                            <img width="100" length="auto" src="/fullsuite/images/nec.png" alt="nec logo" />
+                        </div>
+
+                        <div class="col p-2">
+                            <img width="100" length="auto" src="/fullsuite/images/yealink.png" alt="yealink logo" />
+                        </div>
+
+                        <div class="col p-2">
+                            <img width="100" length="auto" src="/fullsuite/images/huawei.png" alt="huawei logo" />
+                        </div>
+
+                        <div class="col p-2">
+                            <img width="100" length="auto" src="/fullsuite/images/panasonics.png" alt="panasonic logo" />
+                        </div>
+
+                    </div>
                 </div>
 
             <?php 

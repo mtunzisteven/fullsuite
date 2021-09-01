@@ -47,14 +47,16 @@ $pageShortSummary="";
                             <textarea name="message" class="form-control" id="message" rows="6" required></textarea>
                         </div>
                         <div class="block-buttons">
-                            <input type='submit' class="buttons solid-button" value="Submit" />
+                            <button class="buttons solid-button" >Submit</button>
+                        </div>
+                        <div class="m-5" id="responseText">
                         </div>
                     </form>
                     <div class="block-text-container">
                         <div class="block-text">
                             <div class="h11 dark border-bottom">Get in Touch </div>
-                            <div class="h13 dark"> <i class="bi bi-envelope-fill"></i> &nbsp; info@fullsuitetellecoms.com </div>
-                            <div class="h13 dark"> <i class="bi bi-telephone-fill"></i> &nbsp; 078 512 5653 </div>
+                            <div class="h13 dark"> <i class="bi bi-envelope-fill"></i> &nbsp; info@fullsuitetelecoms.com </div>
+                            <div class="h13 dark"> <i class="bi bi-telephone-fill"></i> &nbsp; 079 484 6374 </div>
 
 
                         </div>

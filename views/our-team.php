@@ -82,10 +82,16 @@ $pageShortSummary="";
                             <p>Senior Sales Rep</p>
                         </div><!-- /.col-lg-4 -->
                         <div class="col-lg-4">
+                            <div class="bd-placeholder-img rounded-circle" width="140" height="140"><img src="/fullsuite/images/nolwazi.jpg" alt="Sifiso Mkhize" /></div>
+
+                            <h2>Nolwazi J.E. Mbhatha</h2>
+                            <p>Sales Rep </p>
+                        </div><!-- /.col-lg-4 -->
+                        <div class="col-lg-4">
                             <div class="bd-placeholder-img rounded-circle" width="140" height="140"><img src="/fullsuite/images/artwell.jpg" alt="Sifiso Mkhize" /></div>
 
                             <h2>Artwel M. Mtolo</h2>
-                            <p>Sales rep and Assistant Technician.</p>
+                            <p>Sales Rep and Assistant Technician.</p>
                         </div><!-- /.col-lg-4 -->
                     </div><!-- /.row -->
                 </div>
